@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="12" failed="1" ignored="0" total="14" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="143063" started-at="2019-04-03T19:21:13Z" finished-at="2019-04-03T19:23:36Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="143063" started-at="2019-04-03T19:21:13Z" finished-at="2019-04-03T19:23:36Z">
+      <class name="com.mobile.datamanage.config.ModProSmokeTests">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="init" is-config="true" duration-ms="6" started-at="2019-04-03T19:21:13Z" finished-at="2019-04-03T19:21:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="OpenApp" duration-ms="84549" started-at="2019-04-03T19:21:13Z" data-provider="getData" finished-at="2019-04-03T19:22:38Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=XYZ, IncAmt=300, Runmode=Y}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenApp -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="init" is-config="true" duration-ms="0" started-at="2019-04-03T19:22:38Z" finished-at="2019-04-03T19:22:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="FAIL" signature="newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="newReport" duration-ms="57038" started-at="2019-04-03T19:22:38Z" data-provider="getData" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.OpenApp" finished-at="2019-04-03T19:23:35Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{Name=XYZ, IncAmt=300, Runmode=Y}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Test failed - An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KPs-MacBook-Air.local', ip: 'fe80:0:0:0:cf8:825c:4ac0:50fb%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.4', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {app: /Users/KPatel/desktop/Usefu..., autoGrantPermissions: true, browserName: , databaseEnabled: false, deviceName: iPad, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, noReset: true, platform: MAC, platformName: iOS, platformVersion: 12.0, takesScreenshot: true, udid: 51374c6ffa892bda089f11d0a63..., webStorageEnabled: false}
+Session ID: 007224cc-93fa-4cb0-bada-d51640166af7
+*** Element info: {Using=accessibility id, value=Unit # FP-053rm12}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Test failed - An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'KPs-MacBook-Air.local', ip: 'fe80:0:0:0:cf8:825c:4ac0:50fb%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.4', java.version: '1.8.0_201'
+Driver info: io.appium.java_client.ios.IOSDriver
+Capabilities {app: /Users/KPatel/desktop/Usefu..., autoGrantPermissions: true, browserName: , databaseEnabled: false, deviceName: iPad, javascriptEnabled: true, locationContextEnabled: false, networkConnectionEnabled: false, noReset: true, platform: MAC, platformName: iOS, platformVersion: 12.0, takesScreenshot: true, udid: 51374c6ffa892bda089f11d0a63..., webStorageEnabled: false}
+Session ID: 007224cc-93fa-4cb0-bada-d51640166af7
+*** Element info: {Using=accessibility id, value=Unit # FP-053rm12}
+at org.testng.Assert.fail(Assert.java:96)
+at com.mobile.datamanage.config.BaseTest.reportFailure(BaseTest.java:296)
+at com.mobile.datamanage.config.BaseTest.IclickAccs(BaseTest.java:145)
+at com.mobile.datamanage.config.ModProSmokeTests.newReport(ModProSmokeTests.java:87)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newReport -->
+        <test-method status="SKIP" signature="ShiftStart()[pri:3, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="ShiftStart" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.newReport" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.ShiftStart()[pri:3, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.ShiftStart()[pri:3, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ShiftStart -->
+        <test-method status="SKIP" signature="JobInfo()[pri:4, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="JobInfo" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ShiftStart" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.JobInfo()[pri:4, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.JobInfo()[pri:4, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- JobInfo -->
+        <test-method status="SKIP" signature="Welds_Activities()[pri:5, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="Welds_Activities" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.JobInfo" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.Welds_Activities()[pri:5, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.Welds_Activities()[pri:5, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Welds_Activities -->
+        <test-method status="SKIP" signature="MissedWelds()[pri:6, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="MissedWelds" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.Welds_Activities" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.MissedWelds()[pri:6, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.MissedWelds()[pri:6, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MissedWelds -->
+        <test-method status="SKIP" signature="Inventory()[pri:7, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="Inventory" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.MissedWelds" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.Inventory()[pri:7, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.Inventory()[pri:7, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Inventory -->
+        <test-method status="SKIP" signature="HyRailBrake()[pri:8, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="HyRailBrake" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.Inventory" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.HyRailBrake()[pri:8, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.HyRailBrake()[pri:8, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HyRailBrake -->
+        <test-method status="SKIP" signature="EndShift()[pri:9, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="EndShift" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.HyRailBrake" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.EndShift()[pri:9, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.EndShift()[pri:9, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EndShift -->
+        <test-method status="SKIP" signature="CrewTime()[pri:10, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="CrewTime" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.EndShift" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.CrewTime()[pri:10, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.CrewTime()[pri:10, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CrewTime -->
+        <test-method status="SKIP" signature="ProductionValue()[pri:11, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="ProductionValue" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.CrewTime" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.ProductionValue()[pri:11, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.ProductionValue()[pri:11, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProductionValue -->
+        <test-method status="SKIP" signature="CheckingWeldsActivities()[pri:12, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="CheckingWeldsActivities" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ProductionValue" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.CheckingWeldsActivities()[pri:12, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.CheckingWeldsActivities()[pri:12, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckingWeldsActivities -->
+        <test-method status="SKIP" signature="ReviewFullReport()[pri:13, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="ReviewFullReport" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.CheckingWeldsActivities" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.ReviewFullReport()[pri:13, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.ReviewFullReport()[pri:13, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ReviewFullReport -->
+        <test-method status="SKIP" signature="Signature()[pri:14, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="Signature" duration-ms="0" started-at="2019-04-03T19:23:35Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ReviewFullReport" finished-at="2019-04-03T19:23:35Z">
+          <exception class="java.lang.Throwable">
+            <message>
+              <![CDATA[Method ModProSmokeTests.Signature()[pri:14, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.Throwable: Method ModProSmokeTests.Signature()[pri:14, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470] depends on not successfully finished methods
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.Throwable -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Signature -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@7770f470]" name="quit" is-config="true" duration-ms="1388" started-at="2019-04-03T19:23:35Z" finished-at="2019-04-03T19:23:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quit -->
+      </class> <!-- com.mobile.datamanage.config.ModProSmokeTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

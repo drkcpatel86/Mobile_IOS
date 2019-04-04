@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [SuiteName]">
+  <test thread-count="5" name="Sample Test(failed)">
+    <classes>
+      <class name="com.mobile.hybrid.SampleTest">
+        <methods>
+          <include name="quit"/>
+          <include name="testApp" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.mobile.hybrid.SampleTest -->
+    </classes>
+  </test> <!-- Sample Test(failed) -->
+  <test thread-count="5" name="Exp Test(failed)">
+    <classes>
+      <class name="com.mobile.hybrid.TestExp">
+        <methods>
+          <include name="testExp" invocation-numbers="0"/>
+          <include name="quit"/>
+        </methods>
+      </class> <!-- com.mobile.hybrid.TestExp -->
+    </classes>
+  </test> <!-- Exp Test(failed) -->
+</suite> <!-- Failed suite [SuiteName] -->
