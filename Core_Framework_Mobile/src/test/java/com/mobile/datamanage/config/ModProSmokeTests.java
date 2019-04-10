@@ -47,9 +47,10 @@ public class ModProSmokeTests extends BaseTest{
 			throw new SkipException("Skipping the test as runmode is NO");
 		}
 		
-		openapp();
+		openapp("appModProPath");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
-	
+		takeScreenshot();
+		//checking();
 		Iclick("categoryLabel_xpath");
 		/*  wait(2);
 		Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
@@ -101,7 +102,8 @@ public class ModProSmokeTests extends BaseTest{
 		//start shift 
 		Iclick("selectShiftStart_xpath");
 		//auto accept alert 
-		IclickAccs("Allow");
+		checking();
+		//IclickAccs("Allow");
 		
 		//shift shart 
 			wait(2);
@@ -332,6 +334,7 @@ public class ModProSmokeTests extends BaseTest{
 		// reports
 		test = rep.startTest("Crew Time");
 		test.log(LogStatus.INFO, "Starting the test Crew Time");
+		wait(2);
 		IclickAccs("Crew Time");
 		IclickAccs("Add");
 		ITouchXNY(457,391);
@@ -434,6 +437,8 @@ public class ModProSmokeTests extends BaseTest{
 		Iclick("Done2_xpath");
 		drawAsignature(526, 500, 700, 800);
 	   	IclickAccs("Done");
+	   	wait(2);
+	   	takeScreenshot();
 		test.log(LogStatus.PASS, "Able to verify the Signature Test section successfully");
 		System.out.println("Able to verify the Signature Test section successfully");
 	}

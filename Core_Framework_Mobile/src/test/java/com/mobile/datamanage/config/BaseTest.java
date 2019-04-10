@@ -20,6 +20,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.TakesScreenshot;
@@ -48,9 +49,6 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
-
-
-
 
 
 public class BaseTest {
@@ -82,20 +80,11 @@ public class BaseTest {
 		}
 	
 	
-	public String openapp(){
+	public String openapp(String Locatorkey){
 		test.log(LogStatus.INFO, "Opening the app");
 		// init the prop object
-	/*	prop = new Properties();
-		String path = System.getProperty("user.dir")+"//src//test//resources//project.properties";
-		try {
-			FileInputStream fs = new FileInputStream(path);
-			prop.load(fs);
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}   */
-	
-		File app = new File(prop.getProperty("appPath"));
+
+		File app = new File(prop.getProperty(Locatorkey));
 		 DesiredCapabilities capabilities = new DesiredCapabilities();
 		 
 		 capabilities.setCapability("platformName",prop.getProperty("platformName"));
@@ -121,18 +110,7 @@ public class BaseTest {
 	       test.log(LogStatus.INFO, "Opened app successfully");
 		return Constants.PASS;
 	}
-	
-/*	public String IclickAccs(String locatorKey) {
-		test.log(LogStatus.INFO, "Looking for an element "+locatorKey);
-		System.out.println("Looking for an element "+locatorKey);
-		wait(2);
-		Idriver.findElementByAccessibilityId(locatorKey).click();
-		test.log(LogStatus.INFO, "Clicked on "+locatorKey);
-		System.out.println("Clicked on "+locatorKey);
-		//IgetElement(Name).click();
-		return Constants.PASS;
-	}
-	*/
+
 	public String IclickAccs(String Name) {
 		try{
 			test.log(LogStatus.INFO, "Looking for an element "+Name);
@@ -224,6 +202,20 @@ public class BaseTest {
                     .moveTo(PointOption.point(C, D)).release().perform();
 	}	
  
+	public void checking() {
+		
+		try {
+			//IclickAccs("Allow");
+			Idriver.findElementByAccessibilityId("allow").click();
+		}
+		
+		catch(NoSuchElementException e){
+			System.out.println("performing the rest ");
+		}
+	}
+	
+		
+	
 	public MobileElement IgetElement(String locatorKey){
 		MobileElement e=null;
 	

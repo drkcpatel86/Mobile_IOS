@@ -15,7 +15,7 @@
           <include name="HyRailBrake"/>
           <include name="ProductionValue"/>
           <include name="EndShift"/>
-          <include name="newReport" invocation-numbers="0"/>
+          <include name="newReport"/>
           <include name="CrewTime"/>
           <include name="init"/>
           <include name="Welds_Activities"/>
