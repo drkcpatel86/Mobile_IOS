@@ -1,143 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="14" passed="14">
+<testng-results skipped="0" failed="0" ignored="0" total="15" passed="15">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1022786" started-at="2019-04-10T16:00:59Z" finished-at="2019-04-10T16:18:02Z">
+  <suite name="Default suite" duration-ms="884947" started-at="2019-05-07T15:43:15Z" finished-at="2019-05-07T15:58:00Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1022786" started-at="2019-04-10T16:00:59Z" finished-at="2019-04-10T16:18:02Z">
-      <class name="com.mobile.datamanage.config.ModProSmokeTests">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="8" started-at="2019-04-10T16:00:59Z" finished-at="2019-04-10T16:00:59Z">
+    <test name="Default test" duration-ms="884947" started-at="2019-05-07T15:43:15Z" finished-at="2019-05-07T15:58:00Z">
+      <class name="com.mobile.datamanage.config.HTECSmokeTests">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="57" started-at="2019-05-07T15:43:16Z" finished-at="2019-05-07T15:43:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="OpenApp" duration-ms="13735" started-at="2019-04-10T16:00:59Z" data-provider="getData" finished-at="2019-04-10T16:01:13Z">
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="OpenApp" duration-ms="55859" started-at="2019-05-07T15:43:16Z" data-provider="getData" finished-at="2019-05-07T15:44:12Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Name=XYZ, IncAmt=300, Runmode=Y}]]>
+                <![CDATA[{Amount=100, ExpResult=Success, Runmode=Y}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="newReport" duration-ms="51354" started-at="2019-04-10T16:01:13Z" data-provider="getData" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.OpenApp" finished-at="2019-04-10T16:02:04Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:44:12Z" finished-at="2019-05-07T15:44:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="newReport" duration-ms="42134" started-at="2019-05-07T15:44:12Z" data-provider="getData" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.OpenApp" finished-at="2019-05-07T15:44:54Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Name=XYZ, IncAmt=300, Runmode=Y}]]>
+                <![CDATA[{Amount=100, ExpResult=Success, Runmode=Y}]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- newReport -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:01:13Z" finished-at="2019-04-10T16:01:13Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:44:54Z" finished-at="2019-05-07T15:44:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="1" started-at="2019-04-10T16:02:04Z" finished-at="2019-04-10T16:02:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ShiftStart()[pri:3, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="ShiftStart" duration-ms="164775" started-at="2019-04-10T16:02:04Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.newReport" finished-at="2019-04-10T16:04:49Z">
+        <test-method status="PASS" signature="ShiftStart()[pri:3, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="ShiftStart" duration-ms="94650" started-at="2019-05-07T15:44:54Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.newReport" finished-at="2019-05-07T15:46:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ShiftStart -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="1" started-at="2019-04-10T16:04:49Z" finished-at="2019-04-10T16:04:49Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="JobInfo()[pri:4, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="JobInfo" duration-ms="354029" started-at="2019-04-10T16:04:49Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ShiftStart" finished-at="2019-04-10T16:10:43Z">
+        <test-method status="PASS" signature="JobInfo()[pri:4, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="JobInfo" duration-ms="383495" started-at="2019-05-07T15:46:28Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.ShiftStart" finished-at="2019-05-07T15:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- JobInfo -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:10:43Z" finished-at="2019-04-10T16:10:43Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:46:28Z" finished-at="2019-05-07T15:46:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="Welds_Activities()[pri:5, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="Welds_Activities" duration-ms="19217" started-at="2019-04-10T16:10:43Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.JobInfo" finished-at="2019-04-10T16:11:02Z">
+        <test-method status="PASS" signature="Activities()[pri:5, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="Activities" duration-ms="23451" started-at="2019-05-07T15:52:52Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.JobInfo" finished-at="2019-05-07T15:53:15Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Welds_Activities -->
-        <test-method status="PASS" signature="MissedWelds()[pri:6, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="MissedWelds" duration-ms="17901" started-at="2019-04-10T16:11:02Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.Welds_Activities" finished-at="2019-04-10T16:11:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- MissedWelds -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:11:02Z" finished-at="2019-04-10T16:11:02Z">
+        </test-method> <!-- Activities -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:52:52Z" finished-at="2019-05-07T15:52:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="Inventory()[pri:7, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="Inventory" duration-ms="6260" started-at="2019-04-10T16:11:20Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.MissedWelds" finished-at="2019-04-10T16:11:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Inventory -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:11:20Z" finished-at="2019-04-10T16:11:20Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="1" started-at="2019-05-07T15:53:15Z" finished-at="2019-05-07T15:53:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:11:26Z" finished-at="2019-04-10T16:11:26Z">
+        <test-method status="PASS" signature="InventoryUsage()[pri:6, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="InventoryUsage" duration-ms="24898" started-at="2019-05-07T15:53:15Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.Activities" finished-at="2019-05-07T15:53:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- InventoryUsage -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="1" started-at="2019-05-07T15:53:40Z" finished-at="2019-05-07T15:53:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HyRailBrake()[pri:8, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="HyRailBrake" duration-ms="140505" started-at="2019-04-10T16:11:26Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.Inventory" finished-at="2019-04-10T16:13:47Z">
+        <test-method status="PASS" signature="Equipments()[pri:7, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="Equipments" duration-ms="14562" started-at="2019-05-07T15:53:40Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.InventoryUsage" finished-at="2019-05-07T15:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Equipments -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:53:55Z" finished-at="2019-05-07T15:53:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="MaterialUsage()[pri:8, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="MaterialUsage" duration-ms="13831" started-at="2019-05-07T15:53:55Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.Equipments" finished-at="2019-05-07T15:54:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- MaterialUsage -->
+        <test-method status="PASS" signature="HyRailBrake()[pri:9, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="HyRailBrake" duration-ms="66493" started-at="2019-05-07T15:54:09Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.MaterialUsage" finished-at="2019-05-07T15:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HyRailBrake -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:13:47Z" finished-at="2019-04-10T16:13:47Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:54:09Z" finished-at="2019-05-07T15:54:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="EndShift()[pri:9, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="EndShift" duration-ms="36129" started-at="2019-04-10T16:13:47Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.HyRailBrake" finished-at="2019-04-10T16:14:23Z">
+        <test-method status="PASS" signature="EndShift()[pri:10, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="EndShift" duration-ms="30565" started-at="2019-05-07T15:55:15Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.HyRailBrake" finished-at="2019-05-07T15:55:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EndShift -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:14:23Z" finished-at="2019-04-10T16:14:23Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:55:15Z" finished-at="2019-05-07T15:55:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="CrewTime()[pri:10, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="CrewTime" duration-ms="25668" started-at="2019-04-10T16:14:23Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.EndShift" finished-at="2019-04-10T16:14:49Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="1" started-at="2019-05-07T15:55:46Z" finished-at="2019-05-07T15:55:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="CrewTime()[pri:11, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="CrewTime" duration-ms="19815" started-at="2019-05-07T15:55:46Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.EndShift" finished-at="2019-05-07T15:56:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CrewTime -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="1" started-at="2019-04-10T16:14:49Z" finished-at="2019-04-10T16:14:49Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:56:05Z" finished-at="2019-05-07T15:56:05Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ProductionValue()[pri:11, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="ProductionValue" duration-ms="116596" started-at="2019-04-10T16:14:49Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.CrewTime" finished-at="2019-04-10T16:16:45Z">
+        <test-method status="PASS" signature="ProductionValues()[pri:12, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="ProductionValues" duration-ms="52651" started-at="2019-05-07T15:56:05Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.CrewTime" finished-at="2019-05-07T15:56:58Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProductionValue -->
-        <test-method status="PASS" signature="CheckingWeldsActivities()[pri:12, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="CheckingWeldsActivities" duration-ms="34262" started-at="2019-04-10T16:16:45Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ProductionValue" finished-at="2019-04-10T16:17:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CheckingWeldsActivities -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:16:45Z" finished-at="2019-04-10T16:16:45Z">
+        </test-method> <!-- ProductionValues -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="1" started-at="2019-05-07T15:56:58Z" finished-at="2019-05-07T15:56:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ReviewFullReport()[pri:13, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="ReviewFullReport" duration-ms="4527" started-at="2019-04-10T16:17:20Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.CheckingWeldsActivities" finished-at="2019-04-10T16:17:24Z">
+        <test-method status="PASS" signature="DoneActivities()[pri:13, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="DoneActivities" duration-ms="29993" started-at="2019-05-07T15:56:58Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.ProductionValues" finished-at="2019-05-07T15:57:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DoneActivities -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="1" started-at="2019-05-07T15:57:28Z" finished-at="2019-05-07T15:57:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ReviewFullReport()[pri:14, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="ReviewFullReport" duration-ms="3824" started-at="2019-05-07T15:57:28Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.DoneActivities" finished-at="2019-05-07T15:57:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ReviewFullReport -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:17:20Z" finished-at="2019-04-10T16:17:20Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="init" is-config="true" duration-ms="0" started-at="2019-05-07T15:57:32Z" finished-at="2019-05-07T15:57:32Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="init" is-config="true" duration-ms="0" started-at="2019-04-10T16:17:24Z" finished-at="2019-04-10T16:17:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="Signature()[pri:14, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="Signature" duration-ms="36204" started-at="2019-04-10T16:17:24Z" depends-on-methods="com.mobile.datamanage.config.ModProSmokeTests.ReviewFullReport" finished-at="2019-04-10T16:18:00Z">
+        <test-method status="PASS" signature="Signature()[pri:15, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="Signature" duration-ms="26980" started-at="2019-05-07T15:57:32Z" depends-on-methods="com.mobile.datamanage.config.HTECSmokeTests.ReviewFullReport" finished-at="2019-05-07T15:57:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Signature -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.datamanage.config.ModProSmokeTests@6c40365c]" name="quit" is-config="true" duration-ms="1542" started-at="2019-04-10T16:18:00Z" finished-at="2019-04-10T16:18:02Z">
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.datamanage.config.HTECSmokeTests@23348b5d]" name="quit" is-config="true" duration-ms="1527" started-at="2019-05-07T15:57:59Z" finished-at="2019-05-07T15:58:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.mobile.datamanage.config.ModProSmokeTests -->
+      </class> <!-- com.mobile.datamanage.config.HTECSmokeTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

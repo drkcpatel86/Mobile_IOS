@@ -47,7 +47,7 @@ public class ModProSmokeTests extends BaseTest{
 			throw new SkipException("Skipping the test as runmode is NO");
 		}
 		
-		openapp("appModProPath");
+		openapp("appModPro");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
 		takeScreenshot();
 		//checking();
@@ -156,7 +156,7 @@ public class ModProSmokeTests extends BaseTest{
 		test = rep.startTest("Job Info");
 		test.log(LogStatus.INFO, "Starting the test Job Info");
 				IclickAccs("Job Info");
-				wait(2);
+				wait(4);
 				Iclick("gpslocation_xpath");
 		
 				scrolldownJSExe("311", "818", "267", "484");
@@ -442,7 +442,6 @@ public class ModProSmokeTests extends BaseTest{
 		test.log(LogStatus.PASS, "Able to verify the Signature Test section successfully");
 		System.out.println("Able to verify the Signature Test section successfully");
 	}
-
 
 	
 	@BeforeMethod

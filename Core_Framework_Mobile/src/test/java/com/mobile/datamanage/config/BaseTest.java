@@ -49,6 +49,7 @@ import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
+import javazoom.jl.player.Player;
 
 
 public class BaseTest {
@@ -91,6 +92,7 @@ public class BaseTest {
 		 capabilities.setCapability("platformVersion", prop.getProperty("platformVersion"));
 		 capabilities.setCapability("deviceName",prop.getProperty("deviceName"));
 		 capabilities.setCapability("udid",prop.getProperty("udid"));
+		 capabilities.setCapability("automationName",prop.getProperty("automationName"));
 		 capabilities.setCapability("autoGrantPermissions",prop.getProperty("autoGrantPermissions"));
 		 capabilities.setCapability("noReset",prop.getProperty("noReset"));
 		 capabilities.setCapability("app", app.getAbsolutePath());
@@ -131,7 +133,7 @@ public class BaseTest {
 	public String Iclick(String locatorKey) {
 		test.log(LogStatus.INFO, "Looking for an element "+locatorKey);
 		System.out.println("Looking for an element "+locatorKey);
-		wait(2);
+		//wait(2);
 		IgetElement(locatorKey).click();
 		test.log(LogStatus.INFO, "Clicked on "+locatorKey);
 		System.out.println("Clicked on "+locatorKey);
@@ -140,7 +142,7 @@ public class BaseTest {
 	
 	public String Itype(String locatorKey,String string){
 		test.log(LogStatus.INFO, "Typing in  "+locatorKey);
-		wait(2);
+		//wait(2);
 		IgetElement(locatorKey).sendKeys(string);
 		test.log(LogStatus.INFO, "Found an element "+locatorKey+" Typing values as "+string);
 		System.out.println("Found an element "+locatorKey+" Typing values as "+string);
@@ -149,7 +151,7 @@ public class BaseTest {
 	
 	public void ITouchXNY(int X, int Y) {
 		test.log(LogStatus.INFO, "Performing Touch Action on X axis "+X+" and Y axis "+Y);
-		wait(2);
+	//	wait(2);
 		TouchAction touchAction = new TouchAction(Idriver);
 		touchAction.tap(PointOption.point(X, Y)).perform();  
 		test.log(LogStatus.INFO, "Performed Touch Action on X axis "+X+" and Y axis "+Y);
@@ -206,7 +208,7 @@ public class BaseTest {
 		
 		try {
 			//IclickAccs("Allow");
-			Idriver.findElementByAccessibilityId("allow").click();
+			Idriver.findElementByAccessibilityId("Allow").click();
 		}
 		
 		catch(NoSuchElementException e){
@@ -362,7 +364,20 @@ public void waitForPageToLoad() throws InterruptedException {
 	}
 }
 
+public void sound() {
+	try{
 
+		
+		//(System.getProperty("user.dir")+"//chromedriver.exe")
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"//Alert.mp3");
+        Player playMP3 = new Player(fis);
+
+        playMP3.play();
+
+   }  catch(Exception e){
+        System.out.println(e);
+      }
+}
 
 /************************App functions****/
 

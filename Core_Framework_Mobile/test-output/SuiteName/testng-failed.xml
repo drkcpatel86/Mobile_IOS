@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [SuiteName]">
-  <test thread-count="5" name="Sample Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SuiteName]" parallel="tests">
+  <listeners>
+    <listener class-name="TestNg_Listeners.CustomListeners"/>
+  </listeners>
+  <test thread-count="5" name="ModPro(failed)" parallel="tests">
     <classes>
-      <class name="com.mobile.hybrid.SampleTest">
+      <class name="com.mobile.datamanage.config.ModProSmokeTests">
         <methods>
+          <include name="JobInfo"/>
+          <include name="Signature"/>
+          <include name="MissedWelds"/>
+          <include name="OpenApp"/>
           <include name="quit"/>
-          <include name="testApp" invocation-numbers="0 1"/>
+          <include name="Inventory"/>
+          <include name="CheckingWeldsActivities"/>
+          <include name="HyRailBrake"/>
+          <include name="ProductionValue"/>
+          <include name="EndShift"/>
+          <include name="newReport"/>
+          <include name="CrewTime"/>
+          <include name="init"/>
+          <include name="Welds_Activities"/>
+          <include name="ShiftStart"/>
+          <include name="ReviewFullReport"/>
         </methods>
-      </class> <!-- com.mobile.hybrid.SampleTest -->
+      </class> <!-- com.mobile.datamanage.config.ModProSmokeTests -->
     </classes>
-  </test> <!-- Sample Test(failed) -->
-  <test thread-count="5" name="Exp Test(failed)">
-    <classes>
-      <class name="com.mobile.hybrid.TestExp">
-        <methods>
-          <include name="testExp" invocation-numbers="0"/>
-          <include name="quit"/>
-        </methods>
-      </class> <!-- com.mobile.hybrid.TestExp -->
-    </classes>
-  </test> <!-- Exp Test(failed) -->
+  </test> <!-- ModPro(failed) -->
 </suite> <!-- Failed suite [SuiteName] -->
