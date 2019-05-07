@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+<suite name="SuiteName" parallel="tests">
+
+
+<listeners>
+	<listener class-name="TestNg_Listeners.CustomListeners"></listener>
+</listeners>	
+	
+	<test name="ModPro" allow-return-values="true">
+		<classes>
+			<class name="com.mobile.datamanage.config.ModProSmokeTests" />
+		</classes>
+	</test>
+	
+
+	
+	
+</suite>
+
