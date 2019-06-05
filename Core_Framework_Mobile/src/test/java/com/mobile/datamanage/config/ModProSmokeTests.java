@@ -49,9 +49,11 @@ public class ModProSmokeTests extends BaseTest{
 		
 		openapp("appModPro");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
-		takeScreenshot();
+		//takeScreenshot();
 		//checking();
-		Iclick("categoryLabel_xpath");
+		
+		Idriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Production\"]")).click();
+		//Iclick("categoryLabel_xpath");
 		/*  wait(2);
 		Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		wait(3);
@@ -76,8 +78,10 @@ public class ModProSmokeTests extends BaseTest{
 		test.log(LogStatus.INFO, "Starting the test New Report");
 		Iclick("categoryLabel_xpath");
 		Iclick("addreports_xpath");
+		wait(3);
 		ITouchXNY(363,270);
-		Iclick("Done_xpath");
+		IclickAccs("Done");
+		//Iclick("Done_xpath");
 		wait(1);
 
 		//Unit Field 

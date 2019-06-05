@@ -3,27 +3,21 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.datamanage.config.HTECSmokeTests">
+      <class name="com.mobile.ragression.ModProSmokeTests">
         <methods>
-          <include name="DoneActivities"/>
-          <include name="Signature"/>
+          <include name="ModProRegScenario1"/>
+          <include name="ModProRegScenario3"/>
+          <include name="ModProRegScenario2"/>
+          <include name="ModProRegScenario5"/>
+          <include name="OpenApp" invocation-numbers="0"/>
           <include name="quit"/>
-          <include name="JobInfo"/>
-          <include name="HyRailBrake"/>
-          <include name="EndShift"/>
-          <include name="InventoryUsage"/>
-          <include name="OpenApp"/>
-          <include name="ProductionValues"/>
-          <include name="Activities"/>
-          <include name="newReport"/>
-          <include name="Equipments"/>
+          <include name="ModProRegScenario4"/>
+          <include name="ModProRegScenario7"/>
+          <include name="ModProRegScenario6"/>
+          <include name="ModProRegScenario8"/>
           <include name="init"/>
-          <include name="ShiftStart"/>
-          <include name="CrewTime"/>
-          <include name="MaterialUsage"/>
-          <include name="ReviewFullReport"/>
         </methods>
-      </class> <!-- com.mobile.datamanage.config.HTECSmokeTests -->
+      </class> <!-- com.mobile.ragression.ModProSmokeTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

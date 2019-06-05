@@ -149,6 +149,28 @@ public class BaseTest {
 		return Constants.PASS;
 	}
 	
+	public String IElementDisplayed(String locatorKey) {
+		test.log(LogStatus.INFO, "Looking for an element "+locatorKey+" on the IOS page");
+		System.out.println("Looking for an element "+locatorKey+" on the IOS page");
+		wait(1);
+		
+		
+		try {
+			IgetElement(locatorKey).isDisplayed();
+			System.out.println(locatorKey+" is displayed"); 
+			test.log(LogStatus.INFO, locatorKey+" is displayed");
+			}
+		catch(Exception ex){
+			System.out.println(locatorKey+" is not displayed"); 
+			test.log(LogStatus.INFO, locatorKey+" is not displayed");
+			reportFailure("Test failed - " +ex.getMessage());
+		}
+			
+		
+		return Constants.PASS;
+		
+	}
+	
 	public void ITouchXNY(int X, int Y) {
 		test.log(LogStatus.INFO, "Performing Touch Action on X axis "+X+" and Y axis "+Y);
 	//	wait(2);
@@ -215,23 +237,29 @@ public class BaseTest {
 			System.out.println("performing the rest ");
 		}
 	}
-	
+	public boolean isIElementPresent(String locatorKey){
+		List<MobileElement> e=null;
+		if(locatorKey.endsWith("_aid"))
+			e = (List<MobileElement>) Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey));
+		else if(locatorKey.endsWith("_name"))
+			e = (List<MobileElement>) Idriver.findElements(By.name(prop.getProperty(locatorKey)));
+		else if(locatorKey.endsWith("_xpath"))
+			e = (List<MobileElement>) Idriver.findElement(By.xpath(prop.getProperty(locatorKey)));
+		else{
+			reportFailure("Locator not correct - " + locatorKey);
+			Assert.fail("Locator not correct - " + locatorKey);
+		}
+		
+		if(e.size()==0)
+			return false;	
+		else
+			return true;
+	}
 		
 	
 	public MobileElement IgetElement(String locatorKey){
 		MobileElement e=null;
-	
-		
-	/*	prop = new Properties();
-		String path = System.getProperty("user.dir")+"//src//test//resources//project.properties";
-		try {
-			FileInputStream fs = new FileInputStream(path);
-			prop.load(fs);
-		} catch (Exception e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}  */
-		
+
 		
 		try{
 			if(locatorKey.endsWith("_xpath"))
@@ -257,13 +285,15 @@ public boolean verifyTitle(){
 	return false;		
 }
 public boolean isElementPresent(String locatorKey){
-	List<WebElement> elementList=null;
-	if(locatorKey.endsWith("_id"))
-		elementList = driver.findElements(By.id(prop.getProperty(locatorKey)));
+	List<MobileElement> elementList=null;
+	
+	
+	if(locatorKey.endsWith("_aid"))
+		elementList = Idriver.findElementsByAccessibilityId(prop.getProperty(locatorKey));
 	else if(locatorKey.endsWith("_name"))
-		elementList = driver.findElements(By.name(prop.getProperty(locatorKey)));
+		elementList = Idriver.findElements(By.name(prop.getProperty(locatorKey)));
 	else if(locatorKey.endsWith("_xpath"))
-		elementList = driver.findElements(By.xpath(prop.getProperty(locatorKey)));
+		elementList = Idriver.findElements(By.xpath(prop.getProperty(locatorKey)));
 	else{
 		reportFailure("Locator not correct - " + locatorKey);
 		Assert.fail("Locator not correct - " + locatorKey);
@@ -276,7 +306,36 @@ public boolean isElementPresent(String locatorKey){
 }
 
 
+public boolean verifyElementAbsent(String locatorKey)  {
+	//MobileElement el=null;
+	
+	try {
+		test.log(LogStatus.INFO, "Looking for an element "+locatorKey);
+		System.out.println("Looking for an element "+locatorKey);
+    	if(locatorKey.endsWith("_xpath"))
+			 Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
+		else if(locatorKey.endsWith("_name"))
+			Idriver.findElement(By.name(prop.getProperty(locatorKey))).isDisplayed();
+		else if(locatorKey.endsWith("_aid"))
+			Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey)).isDisplayed();
+		else{
+			Assert.fail("Locator not correct - " + locatorKey);
+		//	reportFailure("Locator not found "+locatorKey);
+		}
+    	
+    //	Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
+ 
+    	test.log(LogStatus.FAIL, "Found an element / Element should not present "+locatorKey);
+    	System.out.println("Element "+locatorKey+" is present");
+    	reportFailure(locatorKey+" - Element should not present");
+        return false;
 
+    } catch (NoSuchElementException e) {
+        System.out.println(locatorKey+ " - Element absent");
+        test.log(LogStatus.PASS,locatorKey + " - Element is not present");
+        return true;
+    }
+}
 
 
 /*****************************Reporting********************************/
@@ -378,6 +437,8 @@ public void sound() {
         System.out.println(e);
       }
 }
+
+
 
 /************************App functions****/
 
