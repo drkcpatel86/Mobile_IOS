@@ -412,9 +412,6 @@ public class ModProSmokeTests extends BaseTest{
 			//System.out.println("Division Field does not exists");
 		
 		test.log(LogStatus.PASS, "Able to the test Verification of Division Field does not exists, using Parameter as MW-406 and WO# 13534");
-				
-	
-		
 		
 	}
 	
@@ -444,7 +441,157 @@ public class ModProSmokeTests extends BaseTest{
 		
 		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE Field does not exists, using Parameter as MW-406 and WO# 13534");
 	}
+	
+	
+	@Test(priority=14)
+	//@Test(priority=14, dependsOnMethods={"ModProRegScenario12"})
+	public void ModProRegScenario13() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario13");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Subdivision” field exists and allows the user to select a subdivision from a spinner., using Parameter as MW-430 and WO# 13066");
+		
+				
+		IclickAccs("Done");
+		IclickAccs("Back");
+		IclickAccs("Save");
+		 wait(2);
+		Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
+		
+		IclickAccs("Edit");
+		
+		//Unit Field 
+		ITouchXNY(339,332);
+	   // Iclick("unit_xpath");
+		//going down 
+	    scrolldownToString("Unit # MW-430");
+	    IclickAccs("Unit # MW-430");
+	    
+	    //wo
+	    ITouchXNY(335,398);
+		Iclick("woc_select2_xpath");
+		
+		IclickAccs("Done");
+		
+		
+		IclickAccs("Job Info");
+		IclickAccs("Edit");
 
+		scrolldownToString("Subdivision:");
+		
+		IElementDisplayed("Subdivision_aid");
+	
+	//	Idriver.findElementByAccessibilityId("Division:").isDisplayed();
+		
+		IclickAccs("sub_division");
+
+
+		WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]"));
+		DatePickerListItem.click();	
+		
+		
+		WebElement DatePickerWheel1 = 
+				Idriver.findElement(By.xpath("//XCUIElementTypePicker"));		
+		List<WebElement> Columns =
+				DatePickerWheel1.findElements(By.xpath("//XCUIElementTypePickerWheel"));
+		
+		JavascriptExecutor js = (JavascriptExecutor)Idriver;
+		Map<String, Object> hp = new HashMap<String, Object>(); 
+		hp.put("order", "next");
+		hp.put("offset", 0.15);
+		hp.put("element", Columns.get(0));
+		js.executeScript("mobile: selectPickerWheelValue", hp);
+		
+		
+		System.out.println(Columns.get(0).getAttribute("value"));
+		
+		Columns.get(0).sendKeys("AB | CAMROSE | AB607");
+	
+	//	Columns.get(2).sendKeys("20130");
+	//	Columns.get(3).sendKeys("PMAM");		
+		
+		Iclick("Done2_xpath");
+
+		
+		test.log(LogStatus.PASS, "Able to the test verify that on the Job Info screen that the “Subdivision” field exists and allows the user to select a subdivision from a spinner., using Parameter as MW-430 and WO# 13066");
+	}
+	
+	@Test(priority=15)
+	//@Test(priority=15, dependsOnMethods={"ModProRegScenario7"})
+	public void ModProRegScenario14() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario14");
+		
+		test.log(LogStatus.INFO, "Starting the test Verification of RR Proj. #/Cost Ctr Field exists and it allows user to type it using Parameter as MW-430 and WO# 13066");
+		
+		IElementDisplayed("RRProj_Costctr_xpath");
+		
+		String RRproj="TestRRProj_Costctr";
+		IgetElement("RRProj2_xpath").clear();
+		Itype("RRProj2_xpath","RRproj");
+		Iclick("Done2_xpath");
+				
+	
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Proj. #/Cost Ctr Field exists and it allows user to type it using Parameter as MW-430 and WO# 13066");		
+		
+	}
+	
+	
+	@Test(priority=16)
+	//@Test(priority=16, dependsOnMethods={"ModProRegScenario14"})
+	public void ModProRegScenario15() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario15");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Region Field does not exists, using Parameter as MW-430 and WO# 13066");
+		
+			verifyElementAbsent("Region_aid");
+		
+		test.log(LogStatus.PASS, "Able to the test Verification of Region Field does not exists, using Parameter as MW-430 and WO# 13066");
+				
+	
+	}
+	
+	@Test(priority=17)
+	//@Test(priority=17, dependsOnMethods={"ModProRegScenario15"})
+	public void ModProRegScenario16() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario16");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Division Field does not exists, using Parameter as MW-430 and WO# 13066");
+		
+
+			verifyElementAbsent("Division_name");
+			
+		
+		test.log(LogStatus.PASS, "Able to the test Verification of Division Field does not exists, using Parameter as MW-430 and WO# 13066");
+		
+	}
+
+	@Test(priority=17)
+	//@Test(priority=17, dependsOnMethods={"ModProRegScenario16"})
+	public void ModProRegScenario17() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario16");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as MW-430 and WO# 13066");
+		
+		//if(!isElementPresent("RRworkordWLC_aid"))RRworkordWLC_aid
+			verifyElementAbsent("RRworkordWLC_aid");
+			System.out.println("RR Word Ord./WLC Field does not exists");
+		
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Word Ord./WLC Field does not exists, using Parameter as MW-406 and WO# 13534");
+	}
+
+	@Test(priority=18)
+	//@Test(priority=18, dependsOnMethods={"ModProRegScenario17"})
+	public void ModProRegScenario18() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario18");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Job No./AFE Field does not exists, using Parameter as MW-430 and WO# 13066");
+		
+		
+
+			verifyElementAbsent("RRJob_AFE_aid");
+			System.out.println("RR Job No./AFEC Field does not exists");
+		
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE Field does not exists, using Parameter as MW-430 and WO# 13066");
+	}
+	
+	
+	
+	
+	
 	
 	@BeforeMethod
 	public void init() {

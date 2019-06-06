@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="627921" started-at="2019-06-05T16:35:46Z" finished-at="2019-06-05T16:46:14Z">
+  <suite name="Default suite" duration-ms="411523" started-at="2019-06-05T19:38:12Z" finished-at="2019-06-05T19:45:03Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="627921" started-at="2019-06-05T16:35:46Z" finished-at="2019-06-05T16:46:14Z">
-      <class name="com.mobile.ragression.ModProSmokeTests">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="7" started-at="2019-06-05T16:35:46Z" finished-at="2019-06-05T16:35:46Z">
+    <test name="Default test" duration-ms="411523" started-at="2019-06-05T19:38:12Z" finished-at="2019-06-05T19:45:03Z">
+      <class name="com.mobile.ragression.ModProSmokeTests13to18">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="11" started-at="2019-06-05T19:38:12Z" finished-at="2019-06-05T19:38:12Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="OpenApp" duration-ms="205510" started-at="2019-06-05T16:35:46Z" data-provider="getData" finished-at="2019-06-05T16:39:12Z">
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="OpenApp" duration-ms="201713" started-at="2019-06-05T19:38:12Z" data-provider="getData" finished-at="2019-06-05T19:41:34Z">
           <params>
             <param index="0">
               <value>
@@ -22,107 +22,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T16:39:12Z" finished-at="2019-06-05T16:39:12Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T19:41:34Z" finished-at="2019-06-05T19:41:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario1()[pri:2, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario1" duration-ms="79131" started-at="2019-06-05T16:39:12Z" depends-on-methods="com.mobile.ragression.ModProSmokeTests.OpenApp" finished-at="2019-06-05T16:40:31Z">
+        <test-method status="PASS" signature="ModProRegScenario13()[pri:2, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario13" duration-ms="82616" started-at="2019-06-05T19:41:34Z" finished-at="2019-06-05T19:42:56Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ModProRegScenario1 -->
-        <test-method status="PASS" signature="ModProRegScenario2()[pri:3, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario2" duration-ms="45166" started-at="2019-06-05T16:40:31Z" depends-on-methods="com.mobile.ragression.ModProSmokeTests.ModProRegScenario1" finished-at="2019-06-05T16:41:16Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario2 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:40:31Z" finished-at="2019-06-05T16:40:31Z">
+        </test-method> <!-- ModProRegScenario13 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T19:42:56Z" finished-at="2019-06-05T19:42:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario3()[pri:4, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario3" duration-ms="29571" started-at="2019-06-05T16:41:16Z" finished-at="2019-06-05T16:41:46Z">
+        <test-method status="PASS" signature="ModProRegScenario14()[pri:3, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario14" duration-ms="33534" started-at="2019-06-05T19:42:56Z" finished-at="2019-06-05T19:43:30Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ModProRegScenario3 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:41:16Z" finished-at="2019-06-05T16:41:16Z">
+        </test-method> <!-- ModProRegScenario14 -->
+        <test-method status="PASS" signature="ModProRegScenario15()[pri:4, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario15" duration-ms="21957" started-at="2019-06-05T19:43:30Z" finished-at="2019-06-05T19:43:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario4()[pri:5, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario4" duration-ms="12553" started-at="2019-06-05T16:41:46Z" finished-at="2019-06-05T16:41:58Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario4 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:41:46Z" finished-at="2019-06-05T16:41:46Z">
+        </test-method> <!-- ModProRegScenario15 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T19:43:30Z" finished-at="2019-06-05T19:43:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario5()[pri:6, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario5" duration-ms="14075" started-at="2019-06-05T16:41:58Z" finished-at="2019-06-05T16:42:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario5 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:41:58Z" finished-at="2019-06-05T16:41:58Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T19:43:52Z" finished-at="2019-06-05T19:43:52Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:42:12Z" finished-at="2019-06-05T16:42:12Z">
+        <test-method status="PASS" signature="ModProRegScenario16()[pri:5, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario16" duration-ms="21360" started-at="2019-06-05T19:43:52Z" finished-at="2019-06-05T19:44:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ModProRegScenario16 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T19:44:13Z" finished-at="2019-06-05T19:44:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario6()[pri:7, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario6" duration-ms="22408" started-at="2019-06-05T16:42:12Z" finished-at="2019-06-05T16:42:35Z">
+        <test-method status="PASS" signature="ModProRegScenario17()[pri:6, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario17" duration-ms="21502" started-at="2019-06-05T19:44:13Z" finished-at="2019-06-05T19:44:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ModProRegScenario6 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:42:35Z" finished-at="2019-06-05T16:42:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario7()[pri:8, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario7" duration-ms="97270" started-at="2019-06-05T16:42:35Z" finished-at="2019-06-05T16:44:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario7 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T16:44:12Z" finished-at="2019-06-05T16:44:12Z">
+        </test-method> <!-- ModProRegScenario17 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T19:44:35Z" finished-at="2019-06-05T19:44:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario8()[pri:9, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario8" duration-ms="34952" started-at="2019-06-05T16:44:12Z" finished-at="2019-06-05T16:44:47Z">
+        <test-method status="PASS" signature="ModProRegScenario18()[pri:7, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="ModProRegScenario18" duration-ms="27190" started-at="2019-06-05T19:44:35Z" finished-at="2019-06-05T19:45:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ModProRegScenario8 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T16:44:47Z" finished-at="2019-06-05T16:44:47Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario9()[pri:10, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario9" duration-ms="21630" started-at="2019-06-05T16:44:47Z" finished-at="2019-06-05T16:45:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario9 -->
-        <test-method status="PASS" signature="ModProRegScenario10()[pri:11, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario10" duration-ms="21572" started-at="2019-06-05T16:45:09Z" finished-at="2019-06-05T16:45:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario10 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:45:09Z" finished-at="2019-06-05T16:45:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-06-05T16:45:30Z" finished-at="2019-06-05T16:45:30Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario11()[pri:12, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario11" duration-ms="21749" started-at="2019-06-05T16:45:30Z" finished-at="2019-06-05T16:45:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario11 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-05T16:45:52Z" finished-at="2019-06-05T16:45:52Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario12()[pri:13, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="ModProRegScenario12" duration-ms="20875" started-at="2019-06-05T16:45:52Z" finished-at="2019-06-05T16:46:13Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ModProRegScenario12 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.ModProSmokeTests@131ef10]" name="quit" is-config="true" duration-ms="1382" started-at="2019-06-05T16:46:13Z" finished-at="2019-06-05T16:46:14Z">
+        </test-method> <!-- ModProRegScenario18 -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.ModProSmokeTests13to18@7bedc48a]" name="quit" is-config="true" duration-ms="1571" started-at="2019-06-05T19:45:02Z" finished-at="2019-06-05T19:45:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.mobile.ragression.ModProSmokeTests -->
+      </class> <!-- com.mobile.ragression.ModProSmokeTests13to18 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

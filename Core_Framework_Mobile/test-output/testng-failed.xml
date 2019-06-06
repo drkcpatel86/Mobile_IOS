@@ -3,21 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.ModProSmokeTests">
+      <class name="com.mobile.ragression.ModProSmokeTests13to18">
         <methods>
-          <include name="ModProRegScenario1"/>
-          <include name="ModProRegScenario3"/>
-          <include name="ModProRegScenario2"/>
-          <include name="ModProRegScenario5"/>
-          <include name="OpenApp" invocation-numbers="0"/>
+          <include name="ModProRegScenario14"/>
           <include name="quit"/>
-          <include name="ModProRegScenario4"/>
-          <include name="ModProRegScenario7"/>
-          <include name="ModProRegScenario6"/>
-          <include name="ModProRegScenario8"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.mobile.ragression.ModProSmokeTests -->
+      </class> <!-- com.mobile.ragression.ModProSmokeTests13to18 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
