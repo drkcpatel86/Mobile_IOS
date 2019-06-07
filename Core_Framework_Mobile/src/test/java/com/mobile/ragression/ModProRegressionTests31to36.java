@@ -82,7 +82,7 @@ public class ModProRegressionTests31to36 extends BaseTest{
 	    //going down 
 	   // scrolldownToString("Unit # MW-430");
 	    
-	    IclickAccs("Unit # FP-403");
+	    IclickAccs("Unit # MW-403");
 	    
 		//WO#
 		Iclick("woc_xpath");
@@ -150,14 +150,6 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		test = rep.startTest("ModProRegScenario31");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Region” field exists, and the user can select a division from a spinner. , using Parameter as MW-403 and WO# 14196");
 		
-		IclickAccs("Job Info");
-		wait(4);
-		Iclick("gpslocation_xpath");
-
-		
-	
-
-		scrolldownToString("Subdivision:");
 				
 		IElementDisplayed("Region_aid");
 		
