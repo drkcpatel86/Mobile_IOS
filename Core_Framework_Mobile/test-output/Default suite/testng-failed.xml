@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.ModProRegressionTests25to30">
+      <class name="com.mobile.ragression.ModProRegressionTests31to36">
         <methods>
+          <include name="ModProRegScenario33"/>
           <include name="init"/>
-          <include name="ModProRegScenario26"/>
-          <include name="ModProRegScenario25"/>
+          <include name="ModProRegScenario32"/>
+          <include name="ModProRegScenario31"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- com.mobile.ragression.ModProRegressionTests25to30 -->
+      </class> <!-- com.mobile.ragression.ModProRegressionTests31to36 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
