@@ -3,15 +3,19 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.ModProRegressionTests31to36">
+      <class name="com.mobile.ragression.HBGRegressionTests01to7">
         <methods>
-          <include name="ModProRegScenario33"/>
+          <include name="ModProRegScenario2"/>
           <include name="init"/>
-          <include name="ModProRegScenario32"/>
-          <include name="ModProRegScenario31"/>
+          <include name="ModProRegScenario5"/>
+          <include name="ModProRegScenario6"/>
+          <include name="ModProRegScenario3"/>
+          <include name="ModProRegScenario4"/>
+          <include name="OpenApp" invocation-numbers="0"/>
+          <include name="ModProRegScenario1"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- com.mobile.ragression.ModProRegressionTests31to36 -->
+      </class> <!-- com.mobile.ragression.HBGRegressionTests01to7 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
