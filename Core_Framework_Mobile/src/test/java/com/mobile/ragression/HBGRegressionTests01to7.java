@@ -64,30 +64,32 @@ public class HBGRegressionTests01to7 extends BaseTest{
 		//Idriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Production\"]")).click();
 		Iclick("categoryLabel_xpath");
 		
-		//Code for new report 
-	//	Iclick("categoryLabel_xpath");
-		
-		//verifyElementAbsent("addreports_xpath");
 		Iclick("addreports_xpath");
-		wait(4);
+		wait(5);
 		ITouchXNY(363,270);
-		
-		
 		Iclick("Done_xpath");
 		wait(1);
 
-		//Unit Field 
-	    Iclick("unit_xpath");
-	    
-	   
-	    //going down 
-	    scrolldownToString("Unit # MW-432");
-	    
-	    IclickAccs("Unit # MW-432");
-	    
-		//WO#
-		Iclick("woc_xpath");
-		Iclick("woc_select2_xpath");
+		//Crew
+	    IclickAccs("crewField");
+	  //going down 
+	    scrolldownToString("Unit # BW-886");
+	    IclickAccs("Unit # BW-886");
+
+	    Iclick("woc_xpath");
+	   // Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
+	//    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
+		System.out.println("Please select the second option displayed on IPAD screen");
+	  
+		sound();
+		
+		wait(10);
+	//	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
+		
+		test.log(LogStatus.PASS, "Able to open New Report successfully");
+		
+		
+	
 		
 		//start shift 
 				Iclick("selectShiftStart_xpath");

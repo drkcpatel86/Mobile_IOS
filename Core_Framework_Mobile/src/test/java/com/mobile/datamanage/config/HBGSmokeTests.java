@@ -91,7 +91,7 @@ public class HBGSmokeTests extends BaseTest{
 		System.out.println("Please select the first option displayed on IPAD screen");
 	  
 		sound();
-		sound();
+		
 		wait(10);
 	//	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		
