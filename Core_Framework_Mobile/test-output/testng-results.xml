@@ -1,490 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="11" failed="2" ignored="0" total="13" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="1772" started-at="2019-06-13T16:41:12Z" finished-at="2019-06-13T16:41:14Z">
+  <suite name="Default suite" duration-ms="302900" started-at="2019-06-13T18:18:10Z" finished-at="2019-06-13T18:23:13Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="1772" started-at="2019-06-13T16:41:12Z" finished-at="2019-06-13T16:41:14Z">
-      <class name="com.mobile.datamanage.config.HBGSmokeTests">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="init" is-config="true" duration-ms="6" started-at="2019-06-13T16:41:12Z" finished-at="2019-06-13T16:41:12Z">
+    <test name="Default test" duration-ms="302900" started-at="2019-06-13T18:18:10Z" finished-at="2019-06-13T18:23:13Z">
+      <class name="com.mobile.ragression.HBGRegressionTests07to13">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="7" started-at="2019-06-13T18:18:10Z" finished-at="2019-06-13T18:18:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="OpenApp" duration-ms="1697" started-at="2019-06-13T16:41:12Z" data-provider="getData" finished-at="2019-06-13T16:41:14Z">
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="OpenApp" duration-ms="125130" started-at="2019-06-13T18:18:11Z" data-provider="getData" finished-at="2019-06-13T18:20:16Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Amount=100, ExpResult=Success, Runmode=Y}]]>
+                <![CDATA[{Name=XYZ, ExpAmt=300, Runmode=Y}]]>
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Driver failed to start - Connection refused (Connection refused)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'hebu09.hollandco.com', ip: 'fe80:0:0:0:861:3ede:b64:9cc0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.4', java.version: '1.8.0_201'
-Driver info: driver.version: IOSDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Driver failed to start - Connection refused (Connection refused)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'hebu09.hollandco.com', ip: 'fe80:0:0:0:861:3ede:b64:9cc0%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.14.4', java.version: '1.8.0_201'
-Driver info: driver.version: IOSDriver
-at org.testng.Assert.fail(Assert.java:96)
-at com.mobile.datamanage.config.BaseTest.openapp(BaseTest.java:108)
-at com.mobile.datamanage.config.HBGSmokeTests.OpenApp(HBGSmokeTests.java:51)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T16:41:14Z" finished-at="2019-06-13T16:41:14Z">
+        <test-method status="PASS" signature="ModProRegScenario1()[pri:2, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario1" duration-ms="66162" started-at="2019-06-13T18:20:16Z" depends-on-methods="com.mobile.ragression.HBGRegressionTests07to13.OpenApp" finished-at="2019-06-13T18:21:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ModProRegScenario1 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T18:20:16Z" finished-at="2019-06-13T18:20:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="FAIL" signature="Signature()[pri:2, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="Signature" duration-ms="4" started-at="2019-06-13T16:41:14Z" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.mobile.datamanage.config.BaseTest.takeScreenshot(BaseTest.java:358)
-at com.mobile.datamanage.config.BaseTest.reportFailure(BaseTest.java:348)
-at com.mobile.datamanage.config.BaseTest.IclickAccs(BaseTest.java:125)
-at com.mobile.datamanage.config.HBGSmokeTests.Signature(HBGSmokeTests.java:448)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        <test-method status="PASS" signature="ModProRegScenario2()[pri:3, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario2" duration-ms="28870" started-at="2019-06-13T18:21:22Z" depends-on-methods="com.mobile.ragression.HBGRegressionTests07to13.ModProRegScenario1" finished-at="2019-06-13T18:21:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Signature -->
-        <test-method status="SKIP" signature="newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="newReport" duration-ms="0" started-at="2019-06-13T16:41:14Z" data-provider="getData" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.OpenApp" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.newReport(java.util.Hashtable)[pri:2, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- ModProRegScenario2 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T18:21:22Z" finished-at="2019-06-13T18:21:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- newReport -->
-        <test-method status="SKIP" signature="ShiftStart()[pri:3, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="ShiftStart" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.newReport" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.ShiftStart()[pri:3, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.ShiftStart()[pri:3, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ModProRegScenario3()[pri:4, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario3" duration-ms="20393" started-at="2019-06-13T18:21:51Z" finished-at="2019-06-13T18:22:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ShiftStart -->
-        <test-method status="SKIP" signature="JobInfo()[pri:4, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="JobInfo" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.ShiftStart" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.JobInfo()[pri:4, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.JobInfo()[pri:4, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- ModProRegScenario3 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T18:21:51Z" finished-at="2019-06-13T18:21:51Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- JobInfo -->
-        <test-method status="SKIP" signature="Activities()[pri:5, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="Activities" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.JobInfo" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.Activities()[pri:5, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.Activities()[pri:5, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-13T18:22:11Z" finished-at="2019-06-13T18:22:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Activities -->
-        <test-method status="SKIP" signature="InventoryUsage()[pri:6, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="InventoryUsage" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.Activities" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.InventoryUsage()[pri:6, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.InventoryUsage()[pri:6, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ModProRegScenario4()[pri:5, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario4" duration-ms="20298" started-at="2019-06-13T18:22:11Z" finished-at="2019-06-13T18:22:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- InventoryUsage -->
-        <test-method status="SKIP" signature="HyRailBrake()[pri:7, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="HyRailBrake" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.InventoryUsage" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.HyRailBrake()[pri:7, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.HyRailBrake()[pri:7, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- ModProRegScenario4 -->
+        <test-method status="PASS" signature="ModProRegScenario5()[pri:6, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario5" duration-ms="20279" started-at="2019-06-13T18:22:31Z" finished-at="2019-06-13T18:22:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HyRailBrake -->
-        <test-method status="SKIP" signature="EndShift()[pri:10, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="EndShift" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.HyRailBrake" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.EndShift()[pri:10, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.EndShift()[pri:10, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- ModProRegScenario5 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T18:22:31Z" finished-at="2019-06-13T18:22:31Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EndShift -->
-        <test-method status="SKIP" signature="CrewTime()[pri:11, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="CrewTime" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.EndShift" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.CrewTime()[pri:11, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.CrewTime()[pri:11, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="ModProRegScenario6()[pri:7, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario6" duration-ms="20285" started-at="2019-06-13T18:22:52Z" finished-at="2019-06-13T18:23:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CrewTime -->
-        <test-method status="SKIP" signature="ProductionValues()[pri:12, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="ProductionValues" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.CrewTime" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.ProductionValues()[pri:12, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.ProductionValues()[pri:12, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- ModProRegScenario6 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-13T18:22:52Z" finished-at="2019-06-13T18:22:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProductionValues -->
-        <test-method status="SKIP" signature="DoneActivities()[pri:13, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="DoneActivities" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.ProductionValues" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.DoneActivities()[pri:13, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.DoneActivities()[pri:13, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- DoneActivities -->
-        <test-method status="SKIP" signature="ReviewFullReport()[pri:14, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="ReviewFullReport" duration-ms="0" started-at="2019-06-13T16:41:14Z" depends-on-methods="com.mobile.datamanage.config.HBGSmokeTests.DoneActivities" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method HBGSmokeTests.ReviewFullReport()[pri:14, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method HBGSmokeTests.ReviewFullReport()[pri:14, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10] depends on not successfully finished methods
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:887)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ReviewFullReport -->
-        <test-method status="FAIL" signature="quit()[pri:0, instance:com.mobile.datamanage.config.HBGSmokeTests@131ef10]" name="quit" is-config="true" duration-ms="1" started-at="2019-06-13T16:41:14Z" finished-at="2019-06-13T16:41:14Z">
-          <exception class="java.lang.NullPointerException">
-            <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at com.mobile.datamanage.config.HBGSmokeTests.quit(HBGSmokeTests.java:492)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.lang.reflect.Method.invoke(Method.java:498)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
-at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:455)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.TestRunner.afterRun(TestRunner.java:725)
-at org.testng.TestRunner.run(TestRunner.java:509)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="quit" is-config="true" duration-ms="1425" started-at="2019-06-13T18:23:12Z" finished-at="2019-06-13T18:23:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.mobile.datamanage.config.HBGSmokeTests -->
+      </class> <!-- com.mobile.ragression.HBGRegressionTests07to13 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
