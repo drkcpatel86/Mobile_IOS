@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -32,6 +33,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
@@ -74,7 +76,12 @@ public class HBGRegressionTests07to13 extends BaseTest{
 	    IclickAccs("crewField");
 	  //going down 
 	   // wait(2);
-	    scrolldownToString("Unit # BW-890");
+	  //  scrolldownToString("Unit # BW-880");
+	    
+	    TouchAction action = new TouchAction(Idriver); 
+        action.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+                        .moveTo(PointOption.point(115, 150)).release().perform();
+	   
 	    IclickAccs("Unit # BW-880");
 
 	    //Iclick("woc_xpath");
@@ -150,9 +157,9 @@ public class HBGRegressionTests07to13 extends BaseTest{
 		wait(4);
 		Iclick("gpslocation_xpath");
 
-		scrolldownToString("Division:");
+		scrolldownToString("Line Segment:");
 		
-		IElementDisplayed("Division_aid");
+	//	IElementDisplayed("RRDivisionelement_xpath");
 	
 	//	Idriver.findElementByAccessibilityId("Division:").isDisplayed();
 		
@@ -178,19 +185,19 @@ public class HBGRegressionTests07to13 extends BaseTest{
 		
 		System.out.println(Columns.get(0).getAttribute("value"));
 		
-		Columns.get(0).sendKeys("CHICAGO");
+		Columns.get(0).sendKeys("Southeast");
 	
 	//	Columns.get(2).sendKeys("20130");
 	//	Columns.get(3).sendKeys("PMAM");		
 		
-		Iclick("Done2_xpath");
+		Iclick("Done_xpath");
 
 
 	test.log(LogStatus.PASS, "Able to verify Division Field exists and it allows user to change it using Parameter as MW-432 and WO#13211");
 
 	}
 	
-	@Test(priority=3, dependsOnMethods={"ModProRegScenario1"})
+	@Test(priority=3)
 	public void ModProRegScenario2() throws  InterruptedException{
 		test = rep.startTest("ModProRegScenario2");
 		test.log(LogStatus.INFO, "Starting the test Verification of Sub-Division Field exists and it allows user to select sub-division from the spinner, using Parameter as BW-876 and WO# 14472");
@@ -223,7 +230,7 @@ public class HBGRegressionTests07to13 extends BaseTest{
 		
 		System.out.println(Columns.get(0).getAttribute("value"));
 		
-		Columns.get(0).sendKeys("AL | BEAUMONT | AL377");
+		Columns.get(0).sendKeys("Artesia");
 		
 	//	wait(7);
 	//	Columns.get(2).sendKeys("20130");
