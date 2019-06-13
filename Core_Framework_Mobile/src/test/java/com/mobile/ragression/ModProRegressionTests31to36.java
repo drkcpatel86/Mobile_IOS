@@ -309,7 +309,12 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		test = rep.startTest("ModProRegScenario35");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as MW-403 and WO# 14196");
 		
-		IElementDisplayed("RRworkordWLC_aid");
+		IElementDisplayed("");
+		
+		
+		String RRprojwlc="RRworkordWLC_aid";
+		Itype("RRworkordWLC_inp_xpath",RRprojwlc);
+		Iclick("Done2_xpath");
 			
 		
 		test.log(LogStatus.PASS, "Able to the test Verification of RR Word Ord./WLC Field does not exists, using Parameter as MW-403 and WO# 14196");

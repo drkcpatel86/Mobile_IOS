@@ -40,7 +40,7 @@ public class HBGRegressionTests01to7 extends BaseTest{
 //	ExtentTest test ;
 	DriverScript ds ;
 	SoftAssert softAssert; 
-	String testCaseName="ModProSmokeTests";
+	String testCaseName="HBGRegressionTests";
 	Xls_Reader xls = new Xls_Reader(Constants.DATA_XLS_PATH);
 	
 	@Test(dataProvider="getData", priority=1)
@@ -73,13 +73,13 @@ public class HBGRegressionTests01to7 extends BaseTest{
 		//Crew
 	    IclickAccs("crewField");
 	  //going down 
-	    scrolldownToString("Unit # BW-886");
-	    IclickAccs("Unit # BW-886");
+	    scrolldownToString("Unit # BW-876");
+	    IclickAccs("Unit # BW-876");
 
-	    Iclick("woc_xpath");
-	   // Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
+	    //Iclick("woc_xpath");
+	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
 	//    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
-		System.out.println("Please select the second option displayed on IPAD screen");
+		System.out.println("Please select the First option displayed on IPAD screen");
 	  
 		sound();
 		
@@ -91,219 +91,172 @@ public class HBGRegressionTests01to7 extends BaseTest{
 		
 	
 		
-		//start shift 
+				 //start shift 
 				Iclick("selectShiftStart_xpath");
 				//auto accept alert 
 				checking();
 				//IclickAccs("Allow");
 				
 				//shift shart 
-					wait(2);
-					Iclick("ShiftStart_xpath");
-					Iclick("Done2_xpath");
-						
-					//On Track 
-					wait(4);
-					ITouchXNY(391,325);
-					wait(4);
-					ITouchXNY(614,592);
-					wait(4);
+				wait(2);
+				Iclick("ShiftStart_xpath");
+				Iclick("Done_2toolbar_xpath");
 					
-					//On Track MP
-					wait(4);
-					ITouchXNY(349,390);
-					wait(2);
-					Iclick("Enter3_xpath");
-					wait(3);
-					//done 
-					Iclick("Done2_xpath");
-					wait(3);
-					
-					//workcycles
-					Iclick("workcycle_xpath");
-					wait(2);
-					TouchAction touchAction5 = new TouchAction(Idriver);
-					wait(2);
-					touchAction5.tap(PointOption.point(451, 495)).perform();
-					wait(2);
-					Iclick("Done2_xpath");
-					wait(2);
-					wait(6);
-					
-					TouchAction touchAction6 = new TouchAction(Idriver);
-					wait(2);
-					touchAction6.tap(PointOption.point(429, 575)).perform();
-					wait(2); 
-					wait(2);
-					Iclick("Done2_xpath");
-					wait(2);
-					Iclick("Done1_xpath");
-					wait(2);
-					IclickAccs("Back");
+				//On site
+				wait(2);
+				ITouchXNY(391,325);
+				wait(2);
+				Iclick("Done_2toolbar_xpath");
+			//	ITouchXNY(614,592);
+				wait(4);
+				
+				//On Track MP
+				IclickAccs("on_track");
+				//ITouchXNY(421,415);
+				wait(2);
+				Iclick("Enter3_xpath");
+				wait(3);
+				//done 
+				Iclick("Done_2toolbar_xpath");
+				wait(3);
+				
+				//workcycles
+				Iclick("workcyc_htec_xpath");
+				wait(2);
+				
+				
+			
+				IclickAccs("btn_toolbar_done");
+			//	wait(2);
+			//	wait(6);
+				
+				//crew types
+				IclickAccs("crew_Type");
+				
+				wait(2); 
+				IclickAccs("btn_toolbar_done");
+				IclickAccs("btn_done_navbar");
 		
-					test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as MW-432 and WO#13211");
+					test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as BW-876 and WO# 14472");
 	}
 	
 
 	@Test(priority=2, dependsOnMethods={"OpenApp"})
 	public void ModProRegScenario1() throws  InterruptedException{
 		test = rep.startTest("ModProRegScenario1");
-		test.log(LogStatus.INFO, "Starting the test Verification of Division Field exists and it allows user to change it using Parameter as MW-432 and WO#13211");
-				IclickAccs("Job Info");
-				wait(4);
-				Iclick("gpslocation_xpath");
+		test.log(LogStatus.INFO, "Starting the test Verification of Sub-Division Field exists and it allows user to select sub-division from the spinner, using Parameter as BW-876 and WO# 14472");
 		
-				scrolldownToString("Division:");
-				
-				IElementDisplayed("Division_aid");
-			
-			//	Idriver.findElementByAccessibilityId("Division:").isDisplayed();
-				
-				IclickAccs("divison");
+		IclickAccs("Job Info");
+		wait(4);
+		Iclick("gpslocation_xpath");
+
+		scrolldownToString("Line Segment:");
+		
+		IElementDisplayed("RRSubdivision_aid");
+
+		IclickAccs("sub_division");
+		
+		IElementDisplayed("Subdivision_xpath");
+		//Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]/XCUIElementTypePicker")).isDisplayed();
+		
+
+		WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]"));
+		DatePickerListItem.click();	
+		
+		
+		WebElement DatePickerWheel1 = 
+				Idriver.findElement(By.xpath("//XCUIElementTypePicker"));		
+		List<WebElement> Columns =
+				DatePickerWheel1.findElements(By.xpath("//XCUIElementTypePickerWheel"));
+		
+		JavascriptExecutor js = (JavascriptExecutor)Idriver;
+		Map<String, Object> hp = new HashMap<String, Object>(); 
+		hp.put("order", "next");
+		hp.put("offset", 0.15);
+		hp.put("element", Columns.get(0));
+		js.executeScript("mobile: selectPickerWheelValue", hp);
+		
+		
+		System.out.println(Columns.get(0).getAttribute("value"));
+		
+		Columns.get(0).sendKeys("AL | BEAUMONT | AL377");
+	//	wait(7);
+	//	Columns.get(2).sendKeys("20130");
+	//	Columns.get(3).sendKeys("PMAM");		
+		
+		Iclick("Done_xpath");
+
+		
+
+	test.log(LogStatus.PASS, "Able to verify Sub-Division Field exists and it allows user to change it using Parameter as BW-876 and WO# 14472");
 	
-		
-				WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"Division\"]"));
-				DatePickerListItem.click();	
-				
-				
-				WebElement DatePickerWheel1 = 
-						Idriver.findElement(By.xpath("//XCUIElementTypePicker"));		
-				List<WebElement> Columns =
-						DatePickerWheel1.findElements(By.xpath("//XCUIElementTypePickerWheel"));
-				
-				JavascriptExecutor js = (JavascriptExecutor)Idriver;
-				Map<String, Object> hp = new HashMap<String, Object>(); 
-				hp.put("order", "next");
-				hp.put("offset", 0.15);
-				hp.put("element", Columns.get(0));
-				js.executeScript("mobile: selectPickerWheelValue", hp);
-				
-				
-				System.out.println(Columns.get(0).getAttribute("value"));
-				
-				Columns.get(0).sendKeys("CHICAGO");
-			
-			//	Columns.get(2).sendKeys("20130");
-			//	Columns.get(3).sendKeys("PMAM");		
-				
-				Iclick("Done2_xpath");
-		
-	
-			test.log(LogStatus.PASS, "Able to verify Division Field exists and it allows user to change it using Parameter as MW-432 and WO#13211");
 	}
 	
 	@Test(priority=3, dependsOnMethods={"ModProRegScenario1"})
 	public void ModProRegScenario2() throws  InterruptedException{
 		test = rep.startTest("ModProRegScenario2");
-		test.log(LogStatus.INFO, "Starting the test Verification of Sub-Division Field exists and it allows user to change it using Parameter as MW-432 and WO#13211");
+		test.log(LogStatus.INFO, "Starting the test on the Job Info screen that the “RR Proj. #/Cost Ctr” field exists and allows the user to type in whatever they want using Parameter as BW-876 and WO# 14472");
 				
-				//Idriver.findElementByAccessibilityId("Division:").isDisplayed();
-				
-				IElementDisplayed("Subdivision_aid");
+		IElementDisplayed("RRProj_Costctr_xpath");
 		
-				IclickAccs("sub_division");
-				
-				IElementDisplayed("Subdivision_xpath");
-				//Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]/XCUIElementTypePicker")).isDisplayed();
-				
-
-				WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]"));
-				DatePickerListItem.click();	
-				
-				
-				WebElement DatePickerWheel1 = 
-						Idriver.findElement(By.xpath("//XCUIElementTypePicker"));		
-				List<WebElement> Columns =
-						DatePickerWheel1.findElements(By.xpath("//XCUIElementTypePickerWheel"));
-				
-				JavascriptExecutor js = (JavascriptExecutor)Idriver;
-				Map<String, Object> hp = new HashMap<String, Object>(); 
-				hp.put("order", "next");
-				hp.put("offset", 0.15);
-				hp.put("element", Columns.get(0));
-				js.executeScript("mobile: selectPickerWheelValue", hp);
-				
-				
-				System.out.println(Columns.get(0).getAttribute("value"));
-				
-				Columns.get(0).sendKeys("BROOKFIELD");
-			//	wait(7);
-			//	Columns.get(2).sendKeys("20130");
-			//	Columns.get(3).sendKeys("PMAM");		
-				
-				Iclick("Done2_xpath");
-		
+		String RRproj="TestRRProj_Costctr";
+		Itype("RRPojectctr2_xpath","RRproj");
+		Iclick("Done_xpath");
 				
 	
-			test.log(LogStatus.PASS, "Able to verify Sub-Division Field exists and it allows user to change it using Parameter as MW-432 and WO#13211");
+		test.log(LogStatus.PASS, "Able to verify on the Job Info screen that the “RR Proj. #/Cost Ctr” field exists and allows the user to type in whatever they want using Parameter as BW-876 and WO# 14472");
 	}
 	
 	@Test(priority=4)
 	//@Test(priority=4, dependsOnMethods={"ModProRegScenario2"})
 	public void ModProRegScenario3() throws  InterruptedException{
 		test = rep.startTest("ModProRegScenario3");
-		test.log(LogStatus.INFO, "Starting the test Verification of RR Proj. #/Cost Ctr Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-				
-		IElementDisplayed("RRProj_Costctr_xpath");
 		
-		String RRproj="TestRRProj_Costctr";
-		Itype("RRProj_xpath","RRproj");
-		Iclick("Done2_xpath");
-				
-	
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Proj. #/Cost Ctr Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-	}
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Region” field DOES NOT exist., using Parameter as BW-876 and WO# 14472");
+		
+		verifyElementAbsent("Region_aid");
+		
+		test.log(LogStatus.PASS, "Able to the test that on the Job Info screen that the “Region” field DOES NOT exist., using Parameter as BW-876 and WO# 14472");
+		}
 	@Test(priority=5)
 	//@Test(priority=5, dependsOnMethods={"ModProRegScenario3"})
 	public void ModProRegScenario4() throws  InterruptedException{
 		test = rep.startTest("ModProRegScenario4");
-		test.log(LogStatus.INFO, "Starting the test Verification of RR Work Ord./WLC: Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-				
-		IElementDisplayed("RRworkordWLC_aid");
 		
-		String RRproj="TestRRProj_Costctr";
-		Itype("RRProj_xpath","RRproj");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Division Field does not exists, using Parameter as BW-876 and WO# 14472");
 		
-				
+
+		verifyElementAbsent("Division_name");
 	
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Work Ord./WLC: Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-	}
 	
-	@Test(priority=6)
-	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
-	public void ModProRegScenario5() throws  InterruptedException{
-		test = rep.startTest("ModProRegScenario5");
-		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-				
-		IElementDisplayed("RRJob_AFE_aid");
-		
-		String RRproj="TestRRProj_Costctr";
-		Itype("RRJob_AFE_xpath","RRproj");
-		
-				
+		test.log(LogStatus.PASS, "Able to the test Verification of Division Field does not exists, using Parameter as BW-876 and WO# 14472");
 	
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as MW-432 and WO#13211");
-	}
+		}
 	
-	@Test(priority=7)
-	//@Test(priority=7, dependsOnMethods={"ModProRegScenario5"})
-	public void ModProRegScenario6() throws  InterruptedException{
-		test = rep.startTest("ModProRegScenario6");
-		test.log(LogStatus.INFO, "Starting the test Verification of Region Field does not exists, using Parameter as MW-432 and WO#13211");
-				
-		IElementDisplayed("RRJob_AFE_aid");
-		
-		//if(!isElementPresent("Region_aid"))
-			verifyElementAbsent("Region_aid");	
-		System.out.println("Region is not Displayed");	
-		//reportFailure("Resource is not present by please verify Xpath");
-		
-		//Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
-		
-		test.log(LogStatus.PASS, "Able to the test Verification of Region Field does not exists, using Parameter as MW-432 and WO#13211");
-	}
 
 	
+	@Test(priority=6)
+	//@Test(priority=7, dependsOnMethods={"ModProRegScenario5"})
+	public void ModProRegScenario5() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario6");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as BW-876 and WO# 14472");
+		
+		verifyElementAbsent("RRworkordWLC_aid");
+			
+		
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Word Ord./WLC Field does not exists, using Parameter as BW-876 and WO# 14472");
+	}
+
+	@Test(priority=7)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void ModProRegScenario6() throws  InterruptedException{
+		test = rep.startTest("ModProRegScenario5");
+		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
+				
+		verifyElementAbsent("RRJob_AFE_name");
+	
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
+	}
 	
 	
 	
