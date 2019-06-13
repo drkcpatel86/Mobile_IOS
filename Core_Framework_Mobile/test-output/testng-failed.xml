@@ -3,19 +3,25 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.HBGRegressionTests01to7">
+      <class name="com.mobile.datamanage.config.HBGSmokeTests">
         <methods>
-          <include name="ModProRegScenario2"/>
+          <include name="newReport"/>
+          <include name="CrewTime"/>
+          <include name="ReviewFullReport"/>
+          <include name="ShiftStart"/>
           <include name="init"/>
-          <include name="ModProRegScenario5"/>
-          <include name="ModProRegScenario6"/>
-          <include name="ModProRegScenario3"/>
-          <include name="ModProRegScenario4"/>
+          <include name="Activities"/>
+          <include name="EndShift"/>
+          <include name="ProductionValues"/>
+          <include name="DoneActivities"/>
+          <include name="HyRailBrake"/>
           <include name="OpenApp" invocation-numbers="0"/>
-          <include name="ModProRegScenario1"/>
+          <include name="InventoryUsage"/>
           <include name="quit"/>
+          <include name="JobInfo"/>
+          <include name="Signature"/>
         </methods>
-      </class> <!-- com.mobile.ragression.HBGRegressionTests01to7 -->
+      </class> <!-- com.mobile.datamanage.config.HBGSmokeTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
