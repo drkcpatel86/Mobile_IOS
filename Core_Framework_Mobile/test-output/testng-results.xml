@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="307366" started-at="2019-06-17T18:36:12Z" finished-at="2019-06-17T18:41:19Z">
+  <suite name="Default suite" duration-ms="286177" started-at="2019-06-17T19:46:07Z" finished-at="2019-06-17T19:50:53Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="307366" started-at="2019-06-17T18:36:12Z" finished-at="2019-06-17T18:41:19Z">
-      <class name="com.mobile.ragression.HBGRegressionTests07to13">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="9" started-at="2019-06-17T18:36:12Z" finished-at="2019-06-17T18:36:12Z">
+    <test name="Default test" duration-ms="286177" started-at="2019-06-17T19:46:07Z" finished-at="2019-06-17T19:50:53Z">
+      <class name="com.mobile.ragression.HBGRegressionTests13to18">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="6" started-at="2019-06-17T19:46:07Z" finished-at="2019-06-17T19:46:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="OpenApp" duration-ms="129582" started-at="2019-06-17T18:36:12Z" data-provider="getData" finished-at="2019-06-17T18:38:22Z">
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="OpenApp" duration-ms="123489" started-at="2019-06-17T19:46:07Z" data-provider="getData" finished-at="2019-06-17T19:48:11Z">
           <params>
             <param index="0">
               <value>
@@ -22,59 +22,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T18:38:22Z" finished-at="2019-06-17T18:38:22Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T19:48:11Z" finished-at="2019-06-17T19:48:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="ModProRegScenario1()[pri:2, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="ModProRegScenario1" duration-ms="53543" started-at="2019-06-17T18:38:22Z" depends-on-methods="com.mobile.ragression.HBGRegressionTests07to13.OpenApp" finished-at="2019-06-17T18:39:15Z">
+        <test-method status="PASS" signature="HBGRegScenario13()[pri:2, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario13" duration-ms="46797" started-at="2019-06-17T19:48:11Z" depends-on-methods="com.mobile.ragression.HBGRegressionTests13to18.OpenApp" finished-at="2019-06-17T19:48:57Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ModProRegScenario1 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T18:39:15Z" finished-at="2019-06-17T18:39:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="HBGRegScenario2()[pri:3, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="HBGRegScenario2" duration-ms="34525" started-at="2019-06-17T18:39:15Z" finished-at="2019-06-17T18:39:50Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HBGRegScenario2 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T18:39:50Z" finished-at="2019-06-17T18:39:50Z">
+        </test-method> <!-- HBGRegScenario13 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T19:48:57Z" finished-at="2019-06-17T19:48:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HBGRegScenario3()[pri:4, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="HBGRegScenario3" duration-ms="21486" started-at="2019-06-17T18:39:50Z" finished-at="2019-06-17T18:40:11Z">
+        <test-method status="PASS" signature="HBGRegScenario14()[pri:3, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario14" duration-ms="24904" started-at="2019-06-17T19:48:57Z" finished-at="2019-06-17T19:49:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HBGRegScenario3 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T18:40:11Z" finished-at="2019-06-17T18:40:11Z">
+        </test-method> <!-- HBGRegScenario14 -->
+        <test-method status="PASS" signature="HBGRegScenario15()[pri:4, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario15" duration-ms="22594" started-at="2019-06-17T19:49:22Z" finished-at="2019-06-17T19:49:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="HBGRegScenario4()[pri:5, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="HBGRegScenario4" duration-ms="23921" started-at="2019-06-17T18:40:11Z" finished-at="2019-06-17T18:40:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HBGRegScenario4 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T18:40:35Z" finished-at="2019-06-17T18:40:35Z">
+        </test-method> <!-- HBGRegScenario15 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T19:49:22Z" finished-at="2019-06-17T19:49:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HBGRegScenario5()[pri:6, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="HBGRegScenario5" duration-ms="21252" started-at="2019-06-17T18:40:35Z" finished-at="2019-06-17T18:40:56Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HBGRegScenario5 -->
-        <test-method status="PASS" signature="HBGRegScenario6()[pri:7, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="HBGRegScenario6" duration-ms="21554" started-at="2019-06-17T18:40:56Z" finished-at="2019-06-17T18:41:18Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HBGRegScenario6 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T18:40:56Z" finished-at="2019-06-17T18:40:56Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-06-17T19:49:45Z" finished-at="2019-06-17T19:49:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.HBGRegressionTests07to13@7bedc48a]" name="quit" is-config="true" duration-ms="1416" started-at="2019-06-17T18:41:18Z" finished-at="2019-06-17T18:41:19Z">
+        <test-method status="PASS" signature="HBGRegScenario16()[pri:5, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario16" duration-ms="21404" started-at="2019-06-17T19:49:45Z" finished-at="2019-06-17T19:50:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HBGRegScenario16 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T19:50:06Z" finished-at="2019-06-17T19:50:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="HBGRegScenario17()[pri:6, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario17" duration-ms="23955" started-at="2019-06-17T19:50:06Z" finished-at="2019-06-17T19:50:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HBGRegScenario17 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-06-17T19:50:30Z" finished-at="2019-06-17T19:50:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="HBGRegScenario18()[pri:7, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="HBGRegScenario18" duration-ms="21559" started-at="2019-06-17T19:50:30Z" finished-at="2019-06-17T19:50:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HBGRegScenario18 -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.HBGRegressionTests13to18@7bedc48a]" name="quit" is-config="true" duration-ms="1417" started-at="2019-06-17T19:50:52Z" finished-at="2019-06-17T19:50:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.mobile.ragression.HBGRegressionTests07to13 -->
+      </class> <!-- com.mobile.ragression.HBGRegressionTests13to18 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

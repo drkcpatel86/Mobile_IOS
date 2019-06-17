@@ -75,13 +75,12 @@ public class HBGRegressionTests07to12 extends BaseTest{
 		//Crew
 	    IclickAccs("crewField");
 	  //going down 
-	   // wait(2);
-	  //  scrolldownToString("Unit # BW-880");
-	    
-	    TouchAction action = new TouchAction(Idriver); 
-        action.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
-                        .moveTo(PointOption.point(115, 150)).release().perform();
-	   
+		   // wait(2);
+		  //  scrolldownToString("Unit # BW-880");
+		    
+		    TouchAction action = new TouchAction(Idriver); 
+	        action.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+	                        .moveTo(PointOption.point(115, 150)).release().perform();
 	    IclickAccs("Unit # BW-880");
 
 	    //Iclick("woc_xpath");

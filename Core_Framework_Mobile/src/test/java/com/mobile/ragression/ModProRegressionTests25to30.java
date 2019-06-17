@@ -46,7 +46,7 @@ public class ModProRegressionTests25to30 extends BaseTest{
 	@Test(dataProvider="getData", priority=1)
 	public void OpenApp(Hashtable<String,String> data) throws MalformedURLException{
 		// reports
-		test = rep.startTest("Opening an App and Selecting Parameter as MW-432 and WO#13211");
+		test = rep.startTest("Opening an App and Selecting Parameter as FP-053 and WO# 14271");
 		test.log(LogStatus.INFO, "Starting the test "+testCaseName);
 		if(! DataUtil.isTestRunnable(xls, testCaseName) || data.get(Constants.RUNMODE_COL).equals("N")){
 			test.log(LogStatus.SKIP, "Skipping the test as runmode is NO");
@@ -138,7 +138,7 @@ public class ModProRegressionTests25to30 extends BaseTest{
 					wait(2);
 					IclickAccs("Back");
 		
-					test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as MW-432 and WO#13211");
+					test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as FP-053 and WO# 14271");
 	}
 	
 
