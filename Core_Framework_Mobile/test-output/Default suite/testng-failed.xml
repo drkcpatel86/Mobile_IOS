@@ -6,8 +6,6 @@
       <class name="com.mobile.ragression.HBGRegressionTests07to13">
         <methods>
           <include name="ModProRegScenario2"/>
-          <include name="OpenApp"/>
-          <include name="ModProRegScenario1"/>
           <include name="quit"/>
           <include name="init"/>
         </methods>
