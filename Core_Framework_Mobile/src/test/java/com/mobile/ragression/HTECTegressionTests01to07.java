@@ -40,7 +40,7 @@ public class HTECTegressionTests01to07 extends BaseTest{
 //	ExtentTest test ;
 	DriverScript ds ;
 	SoftAssert softAssert; 
-	String testCaseName="HBGRegressionTests";
+	String testCaseName="HTECRegressionTests";
 	Xls_Reader xls = new Xls_Reader(Constants.DATA_XLS_PATH);
 	
 	@Test(dataProvider="getData", priority=1)
@@ -65,31 +65,22 @@ public class HTECTegressionTests01to07 extends BaseTest{
 		Iclick("categoryLabel_xpath");
 		
 		Iclick("addreports_xpath");
-		wait(5);
-		ITouchXNY(363,270);
-		Iclick("Done_xpath");
+		
+		IclickAccs("txt_date");
+		Iclick("Done_toolbar_xpath");
 		wait(1);
 
 		//Crew
-	    IclickAccs("crewField");
-	  //going down 
-	 //   scrolldownToString("Crew # TC-005");
+	    IclickAccs("txt_crew");
 	    IclickAccs("Crew # TC-005");
 
-	    //Iclick("woc_xpath");
-	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
-	//    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
-		System.out.println("Please select the First option displayed on IPAD screen");
+//	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
+	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
+		System.out.println("Please select the first option displayed on IPAD screen");
 	  
 		sound();
 		
 		wait(10);
-	//	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
-		
-		test.log(LogStatus.PASS, "Able to open New Report successfully");
-		
-		
-	
 		
 				 //start shift 
 				Iclick("selectShiftStart_xpath");
@@ -100,42 +91,45 @@ public class HTECTegressionTests01to07 extends BaseTest{
 				//shift shart 
 				wait(2);
 				Iclick("ShiftStart_xpath");
-				Iclick("Done_2toolbar_xpath");
-					
+				Iclick("Done_toolbar_xpath");
+				
 				//On site
 				wait(2);
 				ITouchXNY(391,325);
 				wait(2);
-				Iclick("Done_2toolbar_xpath");
+				Iclick("Done_toolbar_xpath");
 			//	ITouchXNY(614,592);
 				wait(4);
 				
 				//On Track MP
-				IclickAccs("on_track");
-				//ITouchXNY(421,415);
+				wait(4);
+				ITouchXNY(421,415);
 				wait(2);
 				Iclick("Enter3_xpath");
 				wait(3);
 				//done 
-				Iclick("Done_2toolbar_xpath");
+				Iclick("Done_toolbar_xpath");
 				wait(3);
 				
 				//workcycles
 				Iclick("workcyc_htec_xpath");
 				wait(2);
-				
-				
-			
-				IclickAccs("btn_toolbar_done");
+				TouchAction touchAction5 = new TouchAction(Idriver);
+				wait(2);
+				touchAction5.tap(PointOption.point(427, 495)).perform();
+				wait(2);
+				Iclick("Done_toolbar_xpath");
 			//	wait(2);
 			//	wait(6);
 				
 				//crew types
-				IclickAccs("crew_Type");
-				
+				TouchAction touchAction6 = new TouchAction(Idriver);
+				wait(2);
+				touchAction6.tap(PointOption.point(444, 575)).perform();
 				wait(2); 
-				IclickAccs("btn_toolbar_done");
-				IclickAccs("btn_done_navbar");
+				wait(2);
+				Iclick("Done_toolbar_xpath");
+				
 				
 				//Have you 
 				Iclick("Straight_edge_xpath");
@@ -147,8 +141,8 @@ public class HTECTegressionTests01to07 extends BaseTest{
 	
 
 	@Test(priority=2, dependsOnMethods={"OpenApp"})
-	public void HBGRegScenario1() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario1");
+	public void HTECRegScenario1() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario1");
 		test.log(LogStatus.INFO, "Starting the test Verification of Sub-Division Field exists and it allows user to select sub-division from the spinner, using Parameter as Unit BW-876 and WO# 14472");
 		
 		IclickAccs("Job Info");
@@ -198,14 +192,14 @@ public class HTECTegressionTests01to07 extends BaseTest{
 	}
 	
 	@Test(priority=3)
-	public void HBGRegScenario2() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario2");
+	public void HTECRegScenario2() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario2");
 		test.log(LogStatus.INFO, "Starting the test on the Job Info screen that the “RR Proj. #/Cost Ctr” field exists and allows the user to type in whatever they want using Parameter as BW-876 and WO# 14472");
 				
 		IElementDisplayed("RRProj_Costctr_xpath");
 		
 		String RRproj="TestRRProj_Costctr";
-		Itype("RRPojectctr2_xpath","RRproj");
+		Itype("RRProj_Costctr_htec_xpath","RRproj");
 		Iclick("Done_xpath");
 				
 	
@@ -214,8 +208,8 @@ public class HTECTegressionTests01to07 extends BaseTest{
 	
 	@Test(priority=4)
 	//@Test(priority=4, dependsOnMethods={"ModProRegScenario2"})
-	public void HBGRegScenario3() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario3");
+	public void HTECRegScenario3() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario3");
 		
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Region” field DOES NOT exist., using Parameter as BW-876 and WO# 14472");
 		
@@ -225,8 +219,8 @@ public class HTECTegressionTests01to07 extends BaseTest{
 		}
 	@Test(priority=5)
 	//@Test(priority=5, dependsOnMethods={"ModProRegScenario3"})
-	public void HBGRegScenario4() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario4");
+	public void HTECRegScenario4() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario4");
 		
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Division Field does not exists, using Parameter as BW-876 and WO# 14472");
 		
@@ -242,8 +236,8 @@ public class HTECTegressionTests01to07 extends BaseTest{
 	
 	@Test(priority=6)
 	//@Test(priority=7, dependsOnMethods={"ModProRegScenario5"})
-	public void HBGRegScenario5() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario5");
+	public void HTECRegScenario5() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario5");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as BW-876 and WO# 14472");
 		
 		verifyElementAbsent("RRworkordWLC_aid");
@@ -254,8 +248,8 @@ public class HTECTegressionTests01to07 extends BaseTest{
 
 	@Test(priority=7)
 	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
-	public void HBGRegScenario6() throws  InterruptedException{
-		test = rep.startTest("HBGRegScenario6");
+	public void HTECRegScenario6() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario6");
 		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
 				
 		verifyElementAbsent("RRJob_AFE_name");
@@ -263,6 +257,25 @@ public class HTECTegressionTests01to07 extends BaseTest{
 		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
 	}
 	
+	@Test(priority=8)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HTECRegScenario7() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario7");
+		test.log(LogStatus.INFO, "Starting the test verify that the Job Role field is added and a value is required in the “Crew Time” screen in the “Crew Time” section of the app., using Parameter as BW-876 and WO# 14472");
+		
+		IclickAccs("btn_edit_done");
+		scrolldownToString("Crew Time");
+		IclickAccs("Crew Time");
+		IclickAccs("btn_plus");
+		IElementDisplayed("Job_Role_aid");
+		IElementDisplayed("red_dot_aid");
+		
+		String RRproj="TestRRProj_Costctr";
+		IclickAccs("job_role");
+		IclickAccs("toolbar_done");
+	
+		test.log(LogStatus.PASS, "Able to the verify that the Job Role field is added and a value is required in the “Crew Time” screen in the “Crew Time” section of the app.using Parameter as BW-876 and WO# 14472");
+	}
 	
 	
 	@BeforeMethod

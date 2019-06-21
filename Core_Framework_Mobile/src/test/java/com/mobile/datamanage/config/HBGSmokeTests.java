@@ -35,7 +35,7 @@ public class HBGSmokeTests extends BaseTest{
 //	ExtentTest test ;
 	DriverScript ds ;
 	SoftAssert softAssert; 
-	String testCaseName="HTECSmokeTests";
+	String testCaseName="HBGSmokeTests";
 	Xls_Reader xls = new Xls_Reader(Constants.DATA_XLS_PATH);
 	
 	@Test(dataProvider="getData", priority=1)
