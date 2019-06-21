@@ -50,8 +50,9 @@ public class HBGSmokeTests extends BaseTest{
 		
 		openapp("appHBG");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
-		//takeScreenshot();
-		//checking();
+		Iclick("Appdata_aid");
+		wait(5);
+		Iclick("AppDOK_aid");
 		Iclick("categoryLabel_xpath");
 		 
 	/*	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();

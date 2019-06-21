@@ -35,7 +35,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HBGRegressionTests01to06 extends BaseTest{
+public class HTECTegressionTests01to07 extends BaseTest{
 //	ExtentReports report = ExtentManager.getInstance();
 //	ExtentTest test ;
 	DriverScript ds ;
@@ -53,7 +53,7 @@ public class HBGRegressionTests01to06 extends BaseTest{
 			throw new SkipException("Skipping the test as runmode is NO");
 		}
 		
-		openapp("appHBG");
+		openapp("appHTEC");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
 		
 		Iclick("Appdata_aid");
@@ -73,8 +73,8 @@ public class HBGRegressionTests01to06 extends BaseTest{
 		//Crew
 	    IclickAccs("crewField");
 	  //going down 
-	    scrolldownToString("Unit # BW-876");
-	    IclickAccs("Unit # BW-876");
+	 //   scrolldownToString("Crew # TC-005");
+	    IclickAccs("Crew # TC-005");
 
 	    //Iclick("woc_xpath");
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
@@ -136,6 +136,11 @@ public class HBGRegressionTests01to06 extends BaseTest{
 				wait(2); 
 				IclickAccs("btn_toolbar_done");
 				IclickAccs("btn_done_navbar");
+				
+				//Have you 
+				Iclick("Straight_edge_xpath");
+				IclickAccs("NO");
+				Iclick("btn_done_xpath");
 		
 				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as Unit BW-876 and WO# 14472");
 	}
@@ -150,7 +155,7 @@ public class HBGRegressionTests01to06 extends BaseTest{
 		wait(4);
 		Iclick("gpslocation_xpath");
 
-		scrolldownToString("Line Segment:");
+		scrolldownToString("Track ID:");
 		
 		IElementDisplayed("RRSubdivision_aid");
 

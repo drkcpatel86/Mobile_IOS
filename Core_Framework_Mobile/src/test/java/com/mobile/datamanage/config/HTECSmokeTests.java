@@ -49,7 +49,9 @@ public class HTECSmokeTests extends BaseTest{
 		
 		openapp("appHTEC");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
-		takeScreenshot();
+		Iclick("Appdata_aid");
+		wait(5);
+		Iclick("AppDOK_aid");
 		//checking();
 		Iclick("categoryLabel_xpath");
 		 
@@ -90,7 +92,7 @@ public class HTECSmokeTests extends BaseTest{
 		System.out.println("Please select the first option displayed on IPAD screen");
 	  
 		sound();
-		sound();
+		
 		wait(10);
 	//	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		

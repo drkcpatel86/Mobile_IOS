@@ -49,8 +49,9 @@ public class ModProSmokeTests extends BaseTest{
 		
 		openapp("appModPro");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
-		//takeScreenshot();
-		//checking();
+		Iclick("Appdata_aid");
+		wait(5);
+		Iclick("AppDOK_aid");
 		
 		Idriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Production\"]")).click();
 		//Iclick("categoryLabel_xpath");
