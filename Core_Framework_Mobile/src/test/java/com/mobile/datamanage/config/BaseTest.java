@@ -246,8 +246,8 @@ public class BaseTest {
 		else if(locatorKey.endsWith("_xpath"))
 			e = (List<MobileElement>) Idriver.findElement(By.xpath(prop.getProperty(locatorKey)));
 		else{
-			reportFailure("Locator not correct - " + locatorKey);
-			Assert.fail("Locator not correct - " + locatorKey);
+			reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
+			Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
 		}
 		
 		if(e.size()==0)
@@ -269,7 +269,8 @@ public class BaseTest {
 			else if(locatorKey.endsWith("_aid"))
 				e= Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey));
 			else{
-				reportFailure("Locator not found "+locatorKey);
+				reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties - "+locatorKey);
+				Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties - " + locatorKey);
 			}
 		}catch(Exception ex){
 			reportFailure("Test failed - " +ex.getMessage());
@@ -295,8 +296,8 @@ public boolean isElementPresent(String locatorKey){
 	else if(locatorKey.endsWith("_xpath"))
 		elementList = Idriver.findElements(By.xpath(prop.getProperty(locatorKey)));
 	else{
-		reportFailure("Locator not correct - " + locatorKey);
-		Assert.fail("Locator not correct - " + locatorKey);
+		reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties - " + locatorKey);
+		Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties - " + locatorKey);
 	}
 	
 	if(elementList.size()==0)
@@ -319,8 +320,8 @@ public boolean verifyElementAbsent(String locatorKey)  {
 		else if(locatorKey.endsWith("_aid"))
 			Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey)).isDisplayed();
 		else{
-			Assert.fail("Locator not correct - " + locatorKey);
-			reportFailure("Locator not found "+locatorKey);
+			Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
+			reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  "+locatorKey);
 		}
     	
     //	Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
