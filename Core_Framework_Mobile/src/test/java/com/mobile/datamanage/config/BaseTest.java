@@ -320,7 +320,7 @@ public boolean verifyElementAbsent(String locatorKey)  {
 			Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey)).isDisplayed();
 		else{
 			Assert.fail("Locator not correct - " + locatorKey);
-		//	reportFailure("Locator not found "+locatorKey);
+			reportFailure("Locator not found "+locatorKey);
 		}
     	
     //	Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
