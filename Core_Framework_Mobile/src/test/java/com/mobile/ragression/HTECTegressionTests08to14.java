@@ -267,11 +267,11 @@ public class HTECTegressionTests08to14 extends BaseTest{
 	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
 	public void HTECRegScenario13() throws  InterruptedException{
 		test = rep.startTest("HTECRegScenario13");
-		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
+		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field does not exists , using Parameter as BW-876 and WO# 14472");
 				
 		verifyElementAbsent("RRJob_AFE_name");
 	
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field does not exists , using Parameter as BW-876 and WO# 14472");
 	}
 	
 	@Test(priority=8)

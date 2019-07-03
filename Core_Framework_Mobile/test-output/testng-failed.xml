@@ -3,26 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.datamanage.config.ModProSmokeTests">
+      <class name="com.mobile.ragression.HTECTegressionTests15to20">
         <methods>
-          <include name="JobInfo"/>
-          <include name="Signature"/>
-          <include name="MissedWelds"/>
-          <include name="OpenApp" invocation-numbers="0"/>
+          <include name="OpenApp"/>
           <include name="quit"/>
-          <include name="Inventory"/>
-          <include name="CheckingWeldsActivities"/>
-          <include name="HyRailBrake"/>
-          <include name="ProductionValue"/>
-          <include name="EndShift"/>
-          <include name="newReport"/>
-          <include name="CrewTime"/>
+          <include name="HTECRegScenario15"/>
           <include name="init"/>
-          <include name="Welds_Activities"/>
-          <include name="ShiftStart"/>
-          <include name="ReviewFullReport"/>
         </methods>
-      </class> <!-- com.mobile.datamanage.config.ModProSmokeTests -->
+      </class> <!-- com.mobile.ragression.HTECTegressionTests15to20 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
