@@ -1,4 +1,4 @@
-package com.mobile.ragression;
+package com.mobile.functional;
 
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -35,7 +35,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HTECTegressionTests15to20 extends BaseTest{
+public class HTECFunctionalTests01 extends BaseTest{
 //	ExtentReports report = ExtentManager.getInstance();
 //	ExtentTest test ;
 	DriverScript ds ;
@@ -46,7 +46,7 @@ public class HTECTegressionTests15to20 extends BaseTest{
 	@Test(dataProvider="getData", priority=1)
 	public void OpenApp(Hashtable<String,String> data) throws MalformedURLException{
 		// reports
-		test = rep.startTest("Opening an App and Selecting Parameter as TC-002 and WO# 16172");
+		test = rep.startTest("Opening an App and Selecting Parameter as Unit BW-876 and WO# 14472");
 		test.log(LogStatus.INFO, "Starting the test "+testCaseName);
 		if(! DataUtil.isTestRunnable(xls, testCaseName) || data.get(Constants.RUNMODE_COL).equals("N")){
 			test.log(LogStatus.SKIP, "Skipping the test as runmode is NO");
@@ -72,17 +72,15 @@ public class HTECTegressionTests15to20 extends BaseTest{
 
 		//Crew
 	    IclickAccs("txt_crew");
-	          
-	    IclickAccs("Crew # TC-002");
+	    IclickAccs("Crew # TC-005");
 
+//	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
-		
-		wait(2);
-		ITouchXNY(475,180);
+		System.out.println("Please select the first option displayed on IPAD screen");
 	  
 		sound();
 		
-
+		wait(10);
 		
 				 //start shift 
 				Iclick("selectShiftStart_xpath");
@@ -138,53 +136,20 @@ public class HTECTegressionTests15to20 extends BaseTest{
 				IclickAccs("NO");
 				Iclick("btn_done_xpath");
 		
-				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as Unit TC-098 and WO# 16311");
+				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter as Unit BW-876 and WO# 14472");
 	}
 	
 
 	@Test(priority=2, dependsOnMethods={"OpenApp"})
-	public void HTECRegScenario15() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario15");
-		test.log(LogStatus.INFO, "Starting the test Verification of “Region” field exists and allows the user to type anything they want., using Parameter as TC-098 and WO# 16311");
+	public void HTECRegScenario1() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario1");
+		test.log(LogStatus.INFO, "Starting the test Verification of Sub-Division Field exists and it allows user to select sub-division from the spinner, using Parameter as Unit BW-876 and WO# 14472");
 		
 		IclickAccs("Job Info");
 		wait(4);
 		Iclick("gpslocation_xpath");
 
 		scrolldownToString("Track ID:");
-		
-		//IclickAccs("RR Region:");
-		String RRRegion="TestRRRegion";
-		Itype("rrregion_xpath",RRRegion);
-		Iclick("Done_xpath");
-
-		
-
-	test.log(LogStatus.PASS, "Able to verify Region” field exists and allows the user to type anything they want. it using Parameter as TC-002 and WO# 16172");
-	
-	}
-	
-	@Test(priority=3)
-	public void HTECRegScenario16() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario16");
-		test.log(LogStatus.INFO, "Starting the test on the Job Info screen that the “Division” field exists and allows the user to type anything they want. using Parameter as TC-002 and WO# 16172");
-				
-		IclickAccs("divison");
-		String RRproj="TestRRDivision";
-		Itype("Divisioninp_xpath","RRproj");
-		Iclick("Done_xpath");
-		
-				
-	
-		test.log(LogStatus.PASS, "Able to verify on the Job Info screen that the “Division” field exists and allows the user to type anything they want. using Parameter as TC-002 and WO# 16172");
-	}
-	
-	@Test(priority=4)
-	//@Test(priority=4, dependsOnMethods={"ModProRegScenario2"})
-	public void HTECRegScenario17() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario17");
-		
-		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Subdivision” field exists and allows the user to select a subdivision from a spinner, using Parameter as TC-002 and WO# 16172");
 		
 		IElementDisplayed("RRSubdivision_aid");
 
@@ -213,27 +178,57 @@ public class HTECTegressionTests15to20 extends BaseTest{
 		
 		System.out.println(Columns.get(0).getAttribute("value"));
 		
-		Columns.get(0).sendKeys("ABL1-ALBERT LEA (UP)");
+		Columns.get(0).sendKeys("AL | BEAUMONT | AL377");
 	//	wait(7);
 	//	Columns.get(2).sendKeys("20130");
 	//	Columns.get(3).sendKeys("PMAM");		
 		
 		Iclick("Done_xpath");
+
 		
-		test.log(LogStatus.PASS, "Able to the test that on the Job Info screen that the “Subdivision” field exists and allows the user to select a subdivision from a spinner, using Parameter as TC-002 and WO# 16172");
+
+	test.log(LogStatus.PASS, "Able to verify Sub-Division Field exists and it allows user to change it using Parameter as BW-876 and WO# 14472");
+	
+	}
+	
+	@Test(priority=3)
+	public void HTECRegScenario2() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario2");
+		test.log(LogStatus.INFO, "Starting the test on the Job Info screen that the “RR Proj. #/Cost Ctr” field exists and allows the user to type in whatever they want using Parameter as BW-876 and WO# 14472");
+				
+		IElementDisplayed("RRProj_Costctr_xpath");
+		
+		String RRproj="TestRRProj_Costctr";
+		Itype("RRProj_Costctr_htec_xpath","RRproj");
+		Iclick("Done_xpath");
+				
+	
+		test.log(LogStatus.PASS, "Able to verify on the Job Info screen that the “RR Proj. #/Cost Ctr” field exists and allows the user to type in whatever they want using Parameter as BW-876 and WO# 14472");
+	}
+	
+	@Test(priority=4)
+	//@Test(priority=4, dependsOnMethods={"ModProRegScenario2"})
+	public void HTECRegScenario3() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario3");
+		
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Region” field DOES NOT exist., using Parameter as BW-876 and WO# 14472");
+		
+		verifyElementAbsent("Region_aid");
+		
+		test.log(LogStatus.PASS, "Able to the test that on the Job Info screen that the “Region” field DOES NOT exist., using Parameter as BW-876 and WO# 14472");
 		}
 	@Test(priority=5)
 	//@Test(priority=5, dependsOnMethods={"ModProRegScenario3"})
-	public void HTECRegScenario18() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario18");
+	public void HTECRegScenario4() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario4");
 		
-		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “RR Proj. #/Cost Ctr” field DOES NOT exist., using Parameter as TC-002 and WO# 16172");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Division Field does not exists, using Parameter as BW-876 and WO# 14472");
 		
 
-		verifyElementAbsent("RRProj_Costctr_xpath");
+		verifyElementAbsent("Division_name");
 	
 	
-		test.log(LogStatus.PASS, "Able to the test Verification of “RR Proj. #/Cost Ctr” field DOES NOT exist., using Parameter as TC-002 and WO# 16172");
+		test.log(LogStatus.PASS, "Able to the test Verification of Division Field does not exists, using Parameter as BW-876 and WO# 14472");
 	
 		}
 	
@@ -241,28 +236,46 @@ public class HTECTegressionTests15to20 extends BaseTest{
 	
 	@Test(priority=6)
 	//@Test(priority=7, dependsOnMethods={"ModProRegScenario5"})
-	public void HTECRegScenario19() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario19");
-		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as TC-002 and WO# 16172");
+	public void HTECRegScenario5() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario5");
+		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as BW-876 and WO# 14472");
 		
 		verifyElementAbsent("RRworkordWLC_aid");
 			
 		
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Word Ord./WLC Field does not exists, using Parameter as TC-002 and WO# 16172");
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Word Ord./WLC Field does not exists, using Parameter as BW-876 and WO# 14472");
 	}
 
 	@Test(priority=7)
 	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
-	public void HTECRegScenario20() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario20");
-		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field Does not exists,using Parameter as TC-002 and WO# 16172");
+	public void HTECRegScenario6() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario6");
+		test.log(LogStatus.INFO, "Starting the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
 				
 		verifyElementAbsent("RRJob_AFE_name");
 	
-		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field Does not exists ,using Parameter as TC-002 and WO# 16172");
+		test.log(LogStatus.PASS, "Able to the test Verification of RR Job No./AFE: Field exists and it allows user to type it using Parameter as BW-876 and WO# 14472");
 	}
 	
+	@Test(priority=8)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HTECRegScenario7() throws  InterruptedException{
+		test = rep.startTest("HTECRegScenario7");
+		test.log(LogStatus.INFO, "Starting the test verify that the Job Role field is added and a value is required in the “Crew Time” screen in the “Crew Time” section of the app., using Parameter as BW-876 and WO# 14472");
+		
+		IclickAccs("btn_edit_done");
+		scrolldownToString("Crew Time");
+		IclickAccs("Crew Time");
+		IclickAccs("btn_plus");
+		IElementDisplayed("Job_Role_aid");
+		IElementDisplayed("red_dot_aid");
+		
+		String RRproj="TestRRProj_Costctr";
+		IclickAccs("job_role");
+		IclickAccs("toolbar_done");
 	
+		test.log(LogStatus.PASS, "Able to the verify that the Job Role field is added and a value is required in the “Crew Time” screen in the “Crew Time” section of the app.using Parameter as BW-876 and WO# 14472");
+	}
 	
 	
 	@BeforeMethod

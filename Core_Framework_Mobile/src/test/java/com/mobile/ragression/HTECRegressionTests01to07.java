@@ -35,7 +35,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HTECTegressionTests01to07 extends BaseTest{
+public class HTECRegressionTests01to07 extends BaseTest{
 //	ExtentReports report = ExtentManager.getInstance();
 //	ExtentTest test ;
 	DriverScript ds ;
