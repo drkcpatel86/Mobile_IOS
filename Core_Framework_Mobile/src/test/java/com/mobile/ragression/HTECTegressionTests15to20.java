@@ -75,13 +75,14 @@ public class HTECTegressionTests15to20 extends BaseTest{
 	          
 	    IclickAccs("Crew # TC-002");
 
-//	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
-		System.out.println("Please select the first option displayed on IPAD screen");
+		
+		wait(2);
+		ITouchXNY(475,180);
 	  
 		sound();
 		
-		wait(10);
+
 		
 				 //start shift 
 				Iclick("selectShiftStart_xpath");

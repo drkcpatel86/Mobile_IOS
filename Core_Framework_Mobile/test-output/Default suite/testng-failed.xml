@@ -3,14 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.HTECTegressionTests15to20">
+      <class name="com.mobile.ragression.HTECTegressionTests27to32">
         <methods>
-          <include name="OpenApp"/>
+          <include name="HTECRegScenario28"/>
+          <include name="HTECRegScenario29"/>
+          <include name="OpenApp" invocation-numbers="0"/>
           <include name="quit"/>
-          <include name="HTECRegScenario15"/>
+          <include name="HTECRegScenario27"/>
           <include name="init"/>
         </methods>
-      </class> <!-- com.mobile.ragression.HTECTegressionTests15to20 -->
+      </class> <!-- com.mobile.ragression.HTECTegressionTests27to32 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
