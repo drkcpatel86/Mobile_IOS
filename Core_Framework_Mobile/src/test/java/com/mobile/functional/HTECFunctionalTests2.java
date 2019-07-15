@@ -35,7 +35,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HTECFunctionalTests01 extends BaseTest{
+public class HTECFunctionalTests2 extends BaseTest{
 //	ExtentReports report = ExtentManager.getInstance();
 //	ExtentTest test ;
 	DriverScript ds ;
@@ -46,7 +46,7 @@ public class HTECFunctionalTests01 extends BaseTest{
 	@Test(dataProvider="getData", priority=1)
 	public void OpenApp(Hashtable<String,String> data) throws MalformedURLException{
 		// reports
-		test = rep.startTest("Opening an App and Selecting Parameter as number TC-005");
+		test = rep.startTest("Opening an App and Selecting Parameter as number TC-098");
 		test.log(LogStatus.INFO, "Starting the test "+testCaseName);
 		if(! DataUtil.isTestRunnable(xls, testCaseName) || data.get(Constants.RUNMODE_COL).equals("N")){
 			test.log(LogStatus.SKIP, "Skipping the test as runmode is NO");
@@ -72,8 +72,23 @@ public class HTECFunctionalTests01 extends BaseTest{
 
 		//Crew
 	    IclickAccs("txt_crew");
-	    IclickAccs("Crew # TC-005");
+	    
+		TouchAction action = new TouchAction(Idriver); 
+	    action.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+	                        .moveTo(PointOption.point(115, 150)).release().perform();
+		 
+	    TouchAction action2 = new TouchAction(Idriver); 
+	     action2.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+	                        .moveTo(PointOption.point(115, 150)).release().perform();
+	       
+	       TouchAction action3 = new TouchAction(Idriver); 
+	       action3.press(PointOption.point(115, 915)).waitAction(WaitOptions.waitOptions(Duration.ofSeconds(3)))
+	                        .moveTo(PointOption.point(115, 150)).release().perform();
+	       
+	    IclickAccs("Crew # TC-098");
 
+	    
+	    
 //	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
 		System.out.println("Please select the first option displayed on IPAD screen");
@@ -136,7 +151,7 @@ public class HTECFunctionalTests01 extends BaseTest{
 				IclickAccs("NO");
 				Iclick("btn_done_xpath");
 		
-				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter number TC-005");
+				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter number TC-098");
 	}
 	
 
@@ -146,7 +161,7 @@ public class HTECFunctionalTests01 extends BaseTest{
 	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
 	public void HTECFunctionalTest() throws  InterruptedException{
 		test = rep.startTest("HTECRegScenario7");
-		test.log(LogStatus.INFO, "Starting the test Use Truck number TC-005 Create a production report with a CN US Work Order.  Tap the “Crew Time” screen, then tap the “+” to add a new employee.  Verify that the “Job Role” field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman.");
+		test.log(LogStatus.INFO, "Starting the test Able to the verify that User Truck number TC 098 Create a production report with a CN CAN Work Order.  Tap the Crew Time screen, then tap the + to add a new employee.  Verify that the Job Role field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman");
 		
 		//IclickAccs("btn_edit_done");
 		scrolldownToString("Crew Time");
@@ -204,7 +219,7 @@ public class HTECFunctionalTests01 extends BaseTest{
 		
 		IclickAccs("toolbar_done");
 	
-		test.log(LogStatus.PASS, "Able to the verify that Use Truck number TC-005 Create a production report with a CN US Work Order.  Tap the “Crew Time” screen, then tap the “+” to add a new employee.  Verify that the “Job Role” field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman.");
+		test.log(LogStatus.PASS, "Able to the verify that User Truck number TC 098 Create a production report with a CN CAN Work Order.  Tap the Crew Time screen, then tap the + to add a new employee.  Verify that the Job Role field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman");
 	}
 	
 	

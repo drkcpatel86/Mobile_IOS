@@ -35,7 +35,7 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 
-public class HTECFunctionalTests01 extends BaseTest{
+public class HBGFunctionalTests1 extends BaseTest{
 //	ExtentReports report = ExtentManager.getInstance();
 //	ExtentTest test ;
 	DriverScript ds ;
@@ -46,14 +46,14 @@ public class HTECFunctionalTests01 extends BaseTest{
 	@Test(dataProvider="getData", priority=1)
 	public void OpenApp(Hashtable<String,String> data) throws MalformedURLException{
 		// reports
-		test = rep.startTest("Opening an App and Selecting Parameter as number TC-005");
+		test = rep.startTest("Opening an App and Selecting Parameter as number Unit # BW-876");
 		test.log(LogStatus.INFO, "Starting the test "+testCaseName);
 		if(! DataUtil.isTestRunnable(xls, testCaseName) || data.get(Constants.RUNMODE_COL).equals("N")){
 			test.log(LogStatus.SKIP, "Skipping the test as runmode is NO");
 			throw new SkipException("Skipping the test as runmode is NO");
 		}
 		
-		openapp("appHTEC");
+		openapp("appHBG");
 		test.log(LogStatus.PASS, "Able to launch the App Successfully");
 		
 		Iclick("Appdata_aid");
@@ -65,14 +65,15 @@ public class HTECFunctionalTests01 extends BaseTest{
 		Iclick("categoryLabel_xpath");
 		
 		Iclick("addreports_xpath");
-		
-		IclickAccs("txt_date");
+		wait(2);
+		ITouchXNY(363,270);
 		Iclick("Done_toolbar_xpath");
 		wait(1);
 
 		//Crew
 	    IclickAccs("txt_crew");
-	    IclickAccs("Crew # TC-005");
+	    scrolldownToString("Unit # BW-876");
+	    IclickAccs("Unit # BW-876");
 
 //	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
@@ -82,61 +83,53 @@ public class HTECFunctionalTests01 extends BaseTest{
 		
 		wait(10);
 		
-				 //start shift 
-				Iclick("selectShiftStart_xpath");
-				//auto accept alert 
-				checking();
-				//IclickAccs("Allow");
-				
-				//shift shart 
-				wait(2);
-				Iclick("ShiftStart_xpath");
-				Iclick("Done_toolbar_xpath");
-				
-				//On site
-				wait(2);
-				ITouchXNY(391,325);
-				wait(2);
-				Iclick("Done_toolbar_xpath");
-			//	ITouchXNY(614,592);
-				wait(4);
-				
-				//On Track MP
-				wait(4);
-				ITouchXNY(421,415);
-				wait(2);
-				Iclick("Enter3_xpath");
-				wait(3);
-				//done 
-				Iclick("Done_toolbar_xpath");
-				wait(3);
-				
-				//workcycles
-				Iclick("workcyc_htec_xpath");
-				wait(2);
-				TouchAction touchAction5 = new TouchAction(Idriver);
-				wait(2);
-				touchAction5.tap(PointOption.point(427, 495)).perform();
-				wait(2);
-				Iclick("Done_toolbar_xpath");
-			//	wait(2);
-			//	wait(6);
-				
-				//crew types
-				TouchAction touchAction6 = new TouchAction(Idriver);
-				wait(2);
-				touchAction6.tap(PointOption.point(444, 575)).perform();
-				wait(2); 
-				wait(2);
-				Iclick("Done_toolbar_xpath");
-				
-				
-				//Have you 
-				Iclick("Straight_edge_xpath");
-				IclickAccs("NO");
-				Iclick("btn_done_xpath");
+		 //start shift 
+		Iclick("selectShiftStart_xpath");
+		//auto accept alert 
+		checking();
+		//IclickAccs("Allow");
 		
-				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter number TC-005");
+		//shift shart 
+		wait(2);
+		Iclick("ShiftStart_xpath");
+		Iclick("Done_2toolbar_xpath");
+			
+		//On site
+		wait(2);
+		ITouchXNY(391,325);
+		wait(2);
+		Iclick("Done_2toolbar_xpath");
+	//	ITouchXNY(614,592);
+		wait(4);
+		
+		//On Track MP
+		IclickAccs("on_track");
+		//ITouchXNY(421,415);
+		wait(2);
+		Iclick("Enter3_xpath");
+		wait(3);
+		//done 
+		Iclick("Done_2toolbar_xpath");
+		wait(3);
+		
+		//workcycles
+		Iclick("workcyc_htec_xpath");
+		wait(2);
+		
+		
+	
+		IclickAccs("btn_toolbar_done");
+	//	wait(2);
+	//	wait(6);
+		
+		//crew types
+		IclickAccs("crew_Type");
+		
+		wait(2); 
+		IclickAccs("btn_toolbar_done");
+		IclickAccs("btn_done_navbar");
+		
+				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter number BW-876");
 	}
 	
 
