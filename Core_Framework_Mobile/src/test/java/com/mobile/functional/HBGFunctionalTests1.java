@@ -67,69 +67,78 @@ public class HBGFunctionalTests1 extends BaseTest{
 		Iclick("addreports_xpath");
 		wait(2);
 		ITouchXNY(363,270);
-		Iclick("Done_toolbar_xpath");
+		Iclick("Done_xpath");
 		wait(1);
 
+
 		//Crew
-	    IclickAccs("txt_crew");
+	    IclickAccs("crewField");
+	  //going down 
 	    scrolldownToString("Unit # BW-876");
 	    IclickAccs("Unit # BW-876");
 
-//	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
-	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
-		System.out.println("Please select the first option displayed on IPAD screen");
+	    //Iclick("woc_xpath");
+	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"workOrder\"]")).click();
+	//    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
+		System.out.println("Please select the First option displayed on IPAD screen");
 	  
 		sound();
 		
 		wait(10);
+	//	Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		
-		 //start shift 
-		Iclick("selectShiftStart_xpath");
-		//auto accept alert 
-		checking();
-		//IclickAccs("Allow");
-		
-		//shift shart 
-		wait(2);
-		Iclick("ShiftStart_xpath");
-		Iclick("Done_2toolbar_xpath");
-			
-		//On site
-		wait(2);
-		ITouchXNY(391,325);
-		wait(2);
-		Iclick("Done_2toolbar_xpath");
-	//	ITouchXNY(614,592);
-		wait(4);
-		
-		//On Track MP
-		IclickAccs("on_track");
-		//ITouchXNY(421,415);
-		wait(2);
-		Iclick("Enter3_xpath");
-		wait(3);
-		//done 
-		Iclick("Done_2toolbar_xpath");
-		wait(3);
-		
-		//workcycles
-		Iclick("workcyc_htec_xpath");
-		wait(2);
+		test.log(LogStatus.PASS, "Able to open New Report successfully");
 		
 		
 	
-		IclickAccs("btn_toolbar_done");
-	//	wait(2);
-	//	wait(6);
 		
-		//crew types
-		IclickAccs("crew_Type");
-		
-		wait(2); 
-		IclickAccs("btn_toolbar_done");
-		IclickAccs("btn_done_navbar");
-		
-				test.log(LogStatus.PASS, "Able to Open an App and Selecting Parameter number BW-876");
+				 //start shift 
+				Iclick("selectShiftStart_xpath");
+				//auto accept alert 
+				checking();
+				//IclickAccs("Allow");
+				
+				//shift shart 
+				wait(2);
+				Iclick("ShiftStart_xpath");
+				Iclick("Done_2toolbar_xpath");
+					
+				//On site
+				wait(2);
+				ITouchXNY(391,325);
+				wait(2);
+				Iclick("Done_2toolbar_xpath");
+			//	ITouchXNY(614,592);
+				wait(4);
+				
+				//On Track MP
+				IclickAccs("on_track");
+				//ITouchXNY(421,415);
+				wait(2);
+				Iclick("Enter3_xpath");
+				wait(3);
+				//done 
+				Iclick("Done_2toolbar_xpath");
+				wait(3);
+				
+				//workcycles
+				Iclick("workcyc_htec_xpath");
+				wait(2);
+				
+				
+			
+				IclickAccs("btn_toolbar_done");
+			//	wait(2);
+			//	wait(6);
+				
+				//crew types
+				IclickAccs("crew_Type");
+				
+				wait(2); 
+				IclickAccs("btn_toolbar_done");
+				IclickAccs("btn_done_navbar");
+				IclickAccs("Save");
+				test.log(LogStatus.PASS, "Able to Open an App, Selecting Parameter number BW-876 and supplying all the details");
 	}
 	
 
@@ -137,69 +146,205 @@ public class HBGFunctionalTests1 extends BaseTest{
 	
 	@Test(priority=2)
 	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
-	public void HTECFunctionalTest() throws  InterruptedException{
-		test = rep.startTest("HTECRegScenario7");
-		test.log(LogStatus.INFO, "Starting the test Use Truck number TC-005 Create a production report with a CN US Work Order.  Tap the “Crew Time” screen, then tap the “+” to add a new employee.  Verify that the “Job Role” field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman.");
+	public void HBGFunctionalTest() throws  InterruptedException{
+		test = rep.startTest("HBGFunction1");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Frog Build 570 3/16 displayed on inventory usage screen");
 		
-		//IclickAccs("btn_edit_done");
-		scrolldownToString("Crew Time");
-		IclickAccs("Crew Time");
-		IclickAccs("btn_plus");
-		IElementDisplayed("Job_Role_aid");
-		IElementDisplayed("red_dot_aid");
+		wait(2);
+		Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		
-		String RRproj="TestRRProj_Costctr";
-		IclickAccs("job_role");
+		//scrolldownToString("Inventory Usage");
+		IclickAccs("Inventory Usage (8)");
 		
+		//
+		if (verifyElementPresent("FrongBuild_aid")) {
+			  System.out.println("Element Frog Build 570 3/16 found on the first page");
+			} else { 
+			  // block of code to be executed if the condition is false
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("FrongBuild_aid");
+				verifyElementPresent("FrongBuild_aid");
+				System.out.println("Element Frog Build 570 3/16 found on the second page");
+			}
 		
-		//WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"job_role\"]"));
-		//DatePickerListItem.click();	
-		
-		
-		WebElement DatePickerWheel1 = 
-				Idriver.findElement(By.xpath("//XCUIElementTypePicker"));		
-		List<WebElement> Columns =
-				DatePickerWheel1.findElements(By.xpath("//XCUIElementTypePickerWheel"));
-		
-		JavascriptExecutor js = (JavascriptExecutor)Idriver;
-		Map<String, Object> hp = new HashMap<String, Object>(); 
-		hp.put("order", "next");
-		hp.put("offset", 0.15);
-		hp.put("element", Columns.get(0));
-		js.executeScript("mobile: selectPickerWheelValue", hp);
-		
-		
-		System.out.println(Columns.get(0).getAttribute("value"));
-	//	System.out.println(Columns.get(1).getAttribute("value"));
-		Columns.get(0).sendKeys("MECHANIC");
-		test.log(LogStatus.PASS, "Able to change job role to MECHANIC in Job Role Wheel Picker");
-		
-		Columns.get(0).sendKeys("TRACK WORKER");
-		test.log(LogStatus.PASS, "Able to change job role to TRACK WORKER in Job Role Wheel Picker");
-		
-		Columns.get(0).sendKeys("FOREMAN");
-		test.log(LogStatus.PASS, "Able to change job role to FOREMAN in Job Role Wheel Picker");
-		
-		Columns.get(0).sendKeys("THERMITE WELDER");
-		test.log(LogStatus.PASS, "Able to change job role to THERMITE WELDER in Job Role Wheel Picker");
-		
-		Columns.get(0).sendKeys("SUPERVISOR");
-		test.log(LogStatus.PASS, "Able to change job role to SUPERVISOR in Job Role Wheel Picker");
-		
-		Columns.get(0).sendKeys("OPERATOR");
-		test.log(LogStatus.PASS, "Able to change job role to SUPERVISOR in Job Role Wheel Picker");
-		
-	//	wait(7);
-	//	Columns.get(2).sendKeys("20130");
-	//	Columns.get(3).sendKeys("PMAM");	
-		
-		
-		
-		IclickAccs("toolbar_done");
+
 	
-		test.log(LogStatus.PASS, "Able to the verify that Use Truck number TC-005 Create a production report with a CN US Work Order.  Tap the “Crew Time” screen, then tap the “+” to add a new employee.  Verify that the “Job Role” field exists, that it is required, and it allows the user to select one of the following options from a spinner: Thermite Welder, Supervisor, Operator, Mechanic, Track Worker, or Foreman.");
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Frog Build 570 3/16 displayed on inventory usage screen");
 	}
 	
+	@Test(priority=3)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest2() throws  InterruptedException{
+		test = rep.startTest("HBGFunction2");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Low Hydrogen Mild Steel Rod displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			//IgetElement("Lowhydrogen_aid").isDisplayed()	;
+			Idriver.findElementByAccessibilityId("EI100151").isDisplayed();
+			System.out.println("Element Low Hydrogen Mild Steel Rod found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("EI100151");
+				verifyElementPresent("Lowhydrogen_aid");
+				System.out.println("Element Low Hydrogen Mild Steel Rod found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Low Hydrogen Mild Steel Rod displayed on inventory usage screen");
+	}
+	
+	@Test(priority=4)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest3() throws  InterruptedException{
+		test = rep.startTest("HBGFunction3");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Surfacing Stone 6 * 3 displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			//IgetElement("SurfacingStone_aid").isDisplayed()	;	
+			Idriver.findElementByAccessibilityId("EI100100").isDisplayed();
+			System.out.println("Element Surfacing Stone 6 * 3 found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("EI100100");
+				verifyElementPresent("SurfacingStone_aid");
+				System.out.println("Element Surfacing Stone 6 * 3 found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Surfacing Stone 6 * 3 displayed on inventory usage screen");
+	}
+	
+	@Test(priority=5)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest4() throws  InterruptedException{
+		test = rep.startTest("HBGFunction4");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Hydralic Impact Wr. displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("PR112-HW").isDisplayed();
+			//IgetElement("HydralicImpact_aid").isDisplayed()	;	
+			System.out.println("Element Hydralic Impact Wr. found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("PR112-HW");
+				verifyElementPresent("HydralicImpact_aid");
+				System.out.println("Element Hydralic Impact Wr. found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Hydralic Impact Wr.  displayed on inventory usage screen");
+	}
+	
+	@Test(priority=6)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest5() throws  InterruptedException{
+		test = rep.startTest("HBGFunction5");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the EQUIPMENT-Cutting Torch Oxi displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("EQUIPMENT-Cutting Torch Oxi").isDisplayed();
+			//IgetElement("CuttingTorch_aid").isDisplayed()	;	
+			System.out.println("Element EQUIPMENT-Cutting Torch Ox found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("PR112-CT");
+				verifyElementPresent("CuttingTorch_aid");
+				System.out.println("Element EQUIPMENT-Cutting Torch Ox found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Hydralic Impact Wr.  displayed on inventory usage screen");
+	}
+	@Test(priority=7)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest6() throws  InterruptedException{
+		test = rep.startTest("HBGFunction6");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Straight Grinding Stone 1 * 8 displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("EI100101").isDisplayed();
+			//IgetElement("Straight_Grindin_aid").isDisplayed()	;	
+			System.out.println("Element Straight Grinding Stone 1 * 8 found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("EI100101");
+				Idriver.findElementByAccessibilityId("EI100101").isDisplayed();
+				System.out.println("Element Straight Grinding Stone 1 * 8 found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Straight Grinding Stone 1 * 8 displayed on inventory usage screen");
+	}
+	
+	@Test(priority=8)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest7() throws  InterruptedException{
+		test = rep.startTest("HBGFunction7");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Fuel Charge displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("Fuel Charge").isDisplayed();
+			//IgetElement("fuelCharge_aid").isDisplayed()	;	
+			System.out.println("Element  Fuel Charge found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("PR023");
+				verifyElementPresent("fuelCharge_aid");
+				System.out.println("Element Fuel Charge found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Fuel Charge displayed on inventory usage screen");
+	}
+	
+	@Test(priority=9)
+	//@Test(priority=6, dependsOnMethods={"ModProRegScenario4"})
+	public void HBGFunctionalTest8() throws  InterruptedException{
+		test = rep.startTest("HBGFunction9");
+		test.log(LogStatus.INFO, "Starting the test with parameter BW-876, verify the Billable Helper displayed on inventory usage screen");
+		
+		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("Billable Helper").isDisplayed();
+			//IgetElement("BillableHelper_aid").isDisplayed()	;	
+			System.out.println("Element found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element Billable Helper didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("PR024");
+				verifyElementPresent("BillableHelper_aid");
+				System.out.println("Element Billable Helper found on the second page");
+			}
+
+	
+		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Billable Helper displayed on inventory usage screen");
+	}
 	
 	@BeforeMethod
 	public void init() {

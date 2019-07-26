@@ -212,6 +212,8 @@ public class BaseTest {
 	
 	public void scrolldownToString(String Name) {
 		JavascriptExecutor js2 = (JavascriptExecutor) Idriver;
+		System.out.println("Scrolling down till"+Name);
+		test.log(LogStatus.INFO, "Scrolling down till "+Name+" element found on the IOS page");
 		HashMap<String, String> scrollObject = new HashMap<String, String>();
 		wait(2);
 		scrollObject.put("direction", "down");
@@ -241,10 +243,14 @@ public class BaseTest {
 		List<MobileElement> e=null;
 		if(locatorKey.endsWith("_aid"))
 			e = (List<MobileElement>) Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey));
+					
+				
 		else if(locatorKey.endsWith("_name"))
 			e = (List<MobileElement>) Idriver.findElements(By.name(prop.getProperty(locatorKey)));
+				//
 		else if(locatorKey.endsWith("_xpath"))
 			e = (List<MobileElement>) Idriver.findElement(By.xpath(prop.getProperty(locatorKey)));
+				//System.out.println(locatorKey+ "displayed");
 		else{
 			reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
 			Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
@@ -253,6 +259,7 @@ public class BaseTest {
 		if(e.size()==0)
 			return false;	
 		else
+			System.out.println(locatorKey+ "displayed");
 			return true;
 	}
 		
@@ -335,6 +342,38 @@ public boolean verifyElementAbsent(String locatorKey)  {
         System.out.println(locatorKey+ " - Element absent");
         test.log(LogStatus.PASS,locatorKey + " - Element is not present");
         return true;
+    }
+}
+
+public boolean verifyElementPresent(String locatorKey)  {
+	//MobileElement el=null;
+	
+	try {
+		test.log(LogStatus.INFO, "Looking for an element "+locatorKey);
+		System.out.println("Looking for an element "+locatorKey);
+    	if(locatorKey.endsWith("_xpath"))
+			 Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
+		else if(locatorKey.endsWith("_name"))
+			Idriver.findElement(By.name(prop.getProperty(locatorKey))).isDisplayed();
+		else if(locatorKey.endsWith("_aid"))
+			Idriver.findElementByAccessibilityId(prop.getProperty(locatorKey)).isDisplayed();
+		else{
+			Assert.fail("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  " + locatorKey);
+			reportFailure("Locator must be saved in _xpath,_id or _aid formate in Project.Properties -  "+locatorKey);
+		}
+    	
+    //	Idriver.findElement(By.xpath(prop.getProperty(locatorKey))).isDisplayed();
+ 
+    	test.log(LogStatus.PASS, "Found an element  "+locatorKey);
+    	System.out.println("Element "+locatorKey+" is present");
+    	//
+        return true;
+
+    } catch (NoSuchElementException e) {
+        System.out.println(locatorKey+ " - Element absent");
+        test.log(LogStatus.FAIL,locatorKey + " - Element is not present");
+        reportFailure(locatorKey+" - Element is not present");
+        return false;
     }
 }
 

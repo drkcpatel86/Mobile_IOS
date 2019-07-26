@@ -342,7 +342,9 @@ public class ModProSmokeTests extends BaseTest{
 		wait(2);
 		IclickAccs("Crew Time");
 		IclickAccs("Add");
-		ITouchXNY(457,391);
+		wait(2);
+		IclickAccs("emp_name");
+		//ITouchXNY(390,391);
 		wait(2);
 		IclickAccs("ADAMSON, ERIK");
 		IclickAccs("Done");

@@ -80,9 +80,9 @@ public class ModProRegressionTests07to12 extends BaseTest{
 	    
 	   
 	    //going down 
-	    scrolldownToString("Unit # MW-432");
+	    scrolldownToString("Unit # MW-406");
 	    
-	    IclickAccs("Unit # MW-432");
+	    IclickAccs("Unit # MW-406");
 	    
 		//WO#
 		Iclick("woc_xpath");

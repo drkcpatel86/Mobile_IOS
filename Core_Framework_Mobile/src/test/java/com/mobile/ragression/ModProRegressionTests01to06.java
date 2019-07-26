@@ -289,9 +289,7 @@ public class ModProRegressionTests01to06 extends BaseTest{
 		test = rep.startTest("ModProRegScenario6");
 		test.log(LogStatus.INFO, "Starting the test Verification of Region Field does not exists, using Parameter as MW-432 and WO#13211");
 				
-		IElementDisplayed("RRJob_AFE_aid");
 		
-		//if(!isElementPresent("Region_aid"))
 			verifyElementAbsent("Region_aid");	
 		System.out.println("Region is not Displayed");	
 		//reportFailure("Resource is not present by please verify Xpath");
