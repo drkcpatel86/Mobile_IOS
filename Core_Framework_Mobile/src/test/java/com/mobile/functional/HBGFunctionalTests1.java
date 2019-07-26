@@ -156,7 +156,22 @@ public class HBGFunctionalTests1 extends BaseTest{
 		//scrolldownToString("Inventory Usage");
 		IclickAccs("Inventory Usage (8)");
 		
-		//
+		
+		try {
+			Idriver.findElementByAccessibilityId("Frog Build 570 3/16").isDisplayed();
+			//IgetElement("BillableHelper_aid").isDisplayed()	;	
+			System.out.println("Element found on the first page");		
+			}
+			catch(Exception e) {
+			  //  Block of code to handle errors
+				System.out.println("Element Frog Build 570 3/16 didnot found on the first page so scolling down for finding the element");
+				scrolldownToString("Frog Build 570 3/16");
+				verifyElementPresent("FrongBuild_aid");
+				System.out.println("Element Frog Build 570 3/16 found on the second page");
+			}
+
+		
+	/*	
 		if (verifyElementPresent("FrongBuild_aid")) {
 			  System.out.println("Element Frog Build 570 3/16 found on the first page");
 			} else { 
@@ -166,7 +181,7 @@ public class HBGFunctionalTests1 extends BaseTest{
 				verifyElementPresent("FrongBuild_aid");
 				System.out.println("Element Frog Build 570 3/16 found on the second page");
 			}
-		
+		*/
 
 	
 		test.log(LogStatus.PASS, "Able to the test with parameter BW-876, verify the Frog Build 570 3/16 displayed on inventory usage screen");
@@ -182,7 +197,7 @@ public class HBGFunctionalTests1 extends BaseTest{
 		
 		try {
 			//IgetElement("Lowhydrogen_aid").isDisplayed()	;
-			Idriver.findElementByAccessibilityId("EI100151").isDisplayed();
+			Idriver.findElementByAccessibilityId("KPEI100151").isDisplayed();
 			System.out.println("Element Low Hydrogen Mild Steel Rod found on the first page");		
 			}
 			catch(Exception e) {
@@ -207,7 +222,7 @@ public class HBGFunctionalTests1 extends BaseTest{
 		
 		try {
 			//IgetElement("SurfacingStone_aid").isDisplayed()	;	
-			Idriver.findElementByAccessibilityId("EI100100").isDisplayed();
+			Idriver.findElementByAccessibilityId("KPEI100100").isDisplayed();
 			System.out.println("Element Surfacing Stone 6 * 3 found on the first page");		
 			}
 			catch(Exception e) {
