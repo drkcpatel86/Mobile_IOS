@@ -78,7 +78,7 @@ public class HTECRegressionTests15to20 extends BaseTest{
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
 		
 		wait(2);
-		ITouchXNY(475,180);
+		//ITouchXNY(475,180);
 	  
 		sound();
 		

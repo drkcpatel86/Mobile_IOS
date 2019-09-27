@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.functional.HBGFunctionalTests1">
+      <class name="com.mobile.ragression.HTECRegressionTests21to26">
         <methods>
-          <include name="HBGFunctionalTest"/>
           <include name="init"/>
-          <include name="HBGFunctionalTest4"/>
+          <include name="HTECRegScenario21"/>
+          <include name="HTECRegScenario22"/>
+          <include name="OpenApp" invocation-numbers="0"/>
           <include name="quit"/>
         </methods>
-      </class> <!-- com.mobile.functional.HBGFunctionalTests1 -->
+      </class> <!-- com.mobile.ragression.HTECRegressionTests21to26 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

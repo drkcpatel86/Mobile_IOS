@@ -78,7 +78,7 @@ public class HTECRegressionTests21to26 extends BaseTest{
 //	    Idriver.findElement(By.xpath("//*[@accessibilityLabel='txt_work_order']")).click();
 	    Idriver.findElement(By.xpath("//XCUIElementTypeTextField[@name=\"txt_work_order\"]" + "[@visible='true']")).click();
 	    wait(2);
-		ITouchXNY(475,180);
+	//	ITouchXNY(475,180);
 		
 		
 				 //start shift 
