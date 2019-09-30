@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+<testng-results skipped="0" failed="0" ignored="0" total="8" passed="8">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="394259" started-at="2019-09-27T19:28:13Z" finished-at="2019-09-27T19:34:47Z">
+  <suite name="Default suite" duration-ms="452665" started-at="2019-09-30T00:44:56Z" finished-at="2019-09-30T00:52:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="394259" started-at="2019-09-27T19:28:13Z" finished-at="2019-09-27T19:34:47Z">
-      <class name="com.mobile.ragression.HTECRegressionTests15to20">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="5" started-at="2019-09-27T19:28:13Z" finished-at="2019-09-27T19:28:13Z">
+    <test name="Default test" duration-ms="452665" started-at="2019-09-30T00:44:56Z" finished-at="2019-09-30T00:52:29Z">
+      <class name="com.mobile.ragression.HTECRegressionTests08to14">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="6" started-at="2019-09-30T00:44:56Z" finished-at="2019-09-30T00:44:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="OpenApp" duration-ms="124239" started-at="2019-09-27T19:28:13Z" data-provider="getData" finished-at="2019-09-27T19:30:17Z">
+        <test-method status="PASS" signature="OpenApp(java.util.Hashtable)[pri:1, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="OpenApp" duration-ms="177135" started-at="2019-09-30T00:44:56Z" data-provider="getData" finished-at="2019-09-30T00:47:53Z">
           <params>
             <param index="0">
               <value>
@@ -22,59 +22,67 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenApp -->
-        <test-method status="PASS" signature="HTECRegScenario15()[pri:2, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario15" duration-ms="69409" started-at="2019-09-27T19:30:17Z" depends-on-methods="com.mobile.ragression.HTECRegressionTests15to20.OpenApp" finished-at="2019-09-27T19:31:26Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HTECRegScenario15 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-09-27T19:30:17Z" finished-at="2019-09-27T19:30:17Z">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-09-30T00:47:53Z" finished-at="2019-09-30T00:47:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-09-27T19:31:26Z" finished-at="2019-09-27T19:31:26Z">
+        <test-method status="PASS" signature="HTECRegScenario08()[pri:2, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario08" duration-ms="116683" started-at="2019-09-30T00:47:53Z" depends-on-methods="com.mobile.ragression.HTECRegressionTests08to14.OpenApp" finished-at="2019-09-30T00:49:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HTECRegScenario08 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-09-30T00:49:50Z" finished-at="2019-09-30T00:49:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HTECRegScenario16()[pri:3, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario16" duration-ms="32747" started-at="2019-09-27T19:31:26Z" finished-at="2019-09-27T19:31:59Z">
+        <test-method status="PASS" signature="HTECRegScenario09()[pri:3, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario09" duration-ms="49556" started-at="2019-09-30T00:49:50Z" finished-at="2019-09-30T00:50:39Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HTECRegScenario16 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-09-27T19:31:59Z" finished-at="2019-09-27T19:31:59Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="HTECRegScenario17()[pri:4, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario17" duration-ms="80942" started-at="2019-09-27T19:31:59Z" finished-at="2019-09-27T19:33:20Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HTECRegScenario17 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="0" started-at="2019-09-27T19:33:20Z" finished-at="2019-09-27T19:33:20Z">
+        </test-method> <!-- HTECRegScenario09 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-09-30T00:50:39Z" finished-at="2019-09-30T00:50:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HTECRegScenario18()[pri:5, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario18" duration-ms="43026" started-at="2019-09-27T19:33:20Z" finished-at="2019-09-27T19:34:03Z">
+        <test-method status="PASS" signature="HTECRegScenario10()[pri:4, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario10" duration-ms="21962" started-at="2019-09-30T00:50:39Z" finished-at="2019-09-30T00:51:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HTECRegScenario18 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-09-27T19:34:03Z" finished-at="2019-09-27T19:34:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- init -->
-        <test-method status="PASS" signature="HTECRegScenario19()[pri:6, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario19" duration-ms="21271" started-at="2019-09-27T19:34:03Z" finished-at="2019-09-27T19:34:24Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HTECRegScenario19 -->
-        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="init" is-config="true" duration-ms="1" started-at="2019-09-27T19:34:24Z" finished-at="2019-09-27T19:34:24Z">
+        </test-method> <!-- HTECRegScenario10 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-09-30T00:51:01Z" finished-at="2019-09-30T00:51:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="HTECRegScenario20()[pri:7, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="HTECRegScenario20" duration-ms="21076" started-at="2019-09-27T19:34:24Z" finished-at="2019-09-27T19:34:46Z">
+        <test-method status="PASS" signature="HTECRegScenario11()[pri:5, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario11" duration-ms="21827" started-at="2019-09-30T00:51:01Z" finished-at="2019-09-30T00:51:23Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- HTECRegScenario20 -->
-        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.HTECRegressionTests15to20@7bedc48a]" name="quit" is-config="true" duration-ms="1487" started-at="2019-09-27T19:34:46Z" finished-at="2019-09-27T19:34:47Z">
+        </test-method> <!-- HTECRegScenario11 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="1" started-at="2019-09-30T00:51:23Z" finished-at="2019-09-30T00:51:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="HTECRegScenario12()[pri:6, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario12" duration-ms="22898" started-at="2019-09-30T00:51:23Z" finished-at="2019-09-30T00:51:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HTECRegScenario12 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="0" started-at="2019-09-30T00:51:46Z" finished-at="2019-09-30T00:51:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="HTECRegScenario13()[pri:7, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario13" duration-ms="21649" started-at="2019-09-30T00:51:46Z" finished-at="2019-09-30T00:52:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HTECRegScenario13 -->
+        <test-method status="PASS" signature="init()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="init" is-config="true" duration-ms="2" started-at="2019-09-30T00:52:08Z" finished-at="2019-09-30T00:52:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="HTECRegScenario14()[pri:8, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="HTECRegScenario14" duration-ms="19540" started-at="2019-09-30T00:52:08Z" finished-at="2019-09-30T00:52:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HTECRegScenario14 -->
+        <test-method status="PASS" signature="quit()[pri:0, instance:com.mobile.ragression.HTECRegressionTests08to14@131ef10]" name="quit" is-config="true" duration-ms="1352" started-at="2019-09-30T00:52:27Z" finished-at="2019-09-30T00:52:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- quit -->
-      </class> <!-- com.mobile.ragression.HTECRegressionTests15to20 -->
+      </class> <!-- com.mobile.ragression.HTECRegressionTests08to14 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

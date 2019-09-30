@@ -148,6 +148,13 @@ public class HTECRegressionTests01to07 extends BaseTest{
 		IclickAccs("Job Info");
 		wait(4);
 		Iclick("gpslocation_xpath");
+		//City
+		//Itype("city_aid","Calgary");
+
+		//State
+		//IclickAccs("state");
+		//IclickAccs("Alberta, CA");
+	
 
 		scrolldownToString("Track ID:");
 		
@@ -178,7 +185,7 @@ public class HTECRegressionTests01to07 extends BaseTest{
 		
 		System.out.println(Columns.get(0).getAttribute("value"));
 		
-		Columns.get(0).sendKeys("AL | BEAUMONT | AL377");
+		Columns.get(0).sendKeys("IL | CENTRALIA | IL342");
 	//	wait(7);
 	//	Columns.get(2).sendKeys("20130");
 	//	Columns.get(3).sendKeys("PMAM");		
