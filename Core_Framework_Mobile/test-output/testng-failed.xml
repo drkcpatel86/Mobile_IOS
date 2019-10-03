@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.ragression.HTECRegressionTests01to07">
+      <class name="com.mobile.ragression.ModProRegressionTests07to12">
         <methods>
-          <include name="HTECRegScenario7"/>
-          <include name="init"/>
           <include name="quit"/>
+          <include name="ModProRegScenario9"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.mobile.ragression.HTECRegressionTests01to07 -->
+      </class> <!-- com.mobile.ragression.ModProRegressionTests07to12 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
