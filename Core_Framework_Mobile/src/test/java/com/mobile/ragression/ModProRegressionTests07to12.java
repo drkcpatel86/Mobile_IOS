@@ -151,9 +151,9 @@ public class ModProRegressionTests07to12 extends BaseTest{
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Subdivision” field exists and allows the user to select a subdivision from a spinner., using Parameter as MW-406 and WO# 13534");
 		
 				
-		IclickAccs("Done");
-		IclickAccs("Back");
-		IclickAccs("Save");
+		//IclickAccs("Done");
+		//IclickAccs("Back");
+	/*	IclickAccs("Save");
 		 wait(2);
 		Idriver.findElement(By.xpath("//XCUIElementTypeCell[@name=\"cell - 1\"]")).click();
 		
@@ -169,10 +169,10 @@ public class ModProRegressionTests07to12 extends BaseTest{
 		Iclick("woc_select2_xpath");
 		
 		IclickAccs("Done");
-		
+		*/
 		
 		IclickAccs("Job Info");
-		IclickAccs("Edit");
+		//IclickAccs("Edit");
 
 		scrolldownToString("Subdivision:");
 		
@@ -223,7 +223,8 @@ public class ModProRegressionTests07to12 extends BaseTest{
 		IElementDisplayed("RRProj_Costctr_xpath");
 		
 		String RRproj="TestRRProj_Costctr";
-		Itype("RRProj2_xpath","RRproj");
+		wait(2);
+		Itype("RRProj_xpath","RRproj");
 		Iclick("Done2_xpath");
 				
 	
@@ -237,10 +238,9 @@ public class ModProRegressionTests07to12 extends BaseTest{
 		test = rep.startTest("ModProRegScenario9");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the Region Field does not exists, using Parameter as MW-406 and WO# 13534");
 		
-		
-	//	if(!isElementPresent("Region_aid"))
+	
 			verifyElementAbsent("Region_aid");
-			//System.out.println("Region Field does not exists");
+			
 		
 		test.log(LogStatus.PASS, "Able to the test Verification of Region Field does not exists, using Parameter as MW-432 and WO#13211");
 				
