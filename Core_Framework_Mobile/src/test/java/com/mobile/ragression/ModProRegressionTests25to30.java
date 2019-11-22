@@ -61,12 +61,6 @@ public class ModProRegressionTests25to30 extends BaseTest{
 		Iclick("AppDOK_aid");
 		//checking();
 		Idriver.findElement(By.xpath("//XCUIElementTypeButton[@name=\"Production\"]")).click();
-		//Iclick("categoryLabel_xpath");
-		
-		//Code for new report 
-	//	Iclick("categoryLabel_xpath");
-		
-		//verifyElementAbsent("addreports_xpath");
 		Iclick("addreports_xpath");
 		wait(4);
 		ITouchXNY(363,270);

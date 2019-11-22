@@ -150,6 +150,11 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		test = rep.startTest("ModProRegScenario31");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Region” field exists, and the user can select a division from a spinner. , using Parameter as MW-403 and WO# 14196");
 		
+		IclickAccs("Job Info");
+		wait(4);
+		Iclick("gpslocation_xpath");
+
+		scrolldownToString("Region:");
 				
 		IElementDisplayed("Region_aid");
 		
@@ -195,10 +200,7 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the “Division” field exists, and the user can select a division from a spinner. , using Parameter as MW-403 and WO# 14196");
 		
-		IclickAccs("Job Info");
-		wait(4);
-		Iclick("gpslocation_xpath");
-
+	
 		
 	
 
@@ -208,7 +210,9 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		
 		//	Idriver.findElementByAccessibilityId("Division:").isDisplayed();
 			
-			IclickAccs("divison");
+			//IclickAccs("divison");
+		  wait(2);  
+		Iclick("Divi_xpath");
 
 	
 			WebElement DatePickerListItem = Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"Division\"]"));
@@ -253,8 +257,8 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		
 		IElementDisplayed("Subdivision_aid");
 		
-		IclickAccs("sub_division");
-		
+		//IclickAccs("sub_division");
+		Iclick("SubD_xpath");
 		IElementDisplayed("Subdivision_xpath");
 		//Idriver.findElement(By.xpath("//XCUIElementTypeSheet[@name=\"SubDivision\"]/XCUIElementTypePicker")).isDisplayed();
 		
@@ -309,7 +313,7 @@ public class ModProRegressionTests31to36 extends BaseTest{
 		test = rep.startTest("ModProRegScenario35");
 		test.log(LogStatus.INFO, "Starting the test verify that on the Job Info screen that the RR Word Ord./WLC Field does not exists, using Parameter as MW-403 and WO# 14196");
 		
-		IElementDisplayed("");
+		IElementDisplayed("RRworkordWLC_aid");
 		
 		
 		String RRprojwlc="RRworkordWLC_aid";

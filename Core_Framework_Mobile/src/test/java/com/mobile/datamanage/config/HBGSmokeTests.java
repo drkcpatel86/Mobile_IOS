@@ -249,7 +249,8 @@ public class HBGSmokeTests extends BaseTest{
 		//ITouchXNY(600,950);
 		wait(1);
 		IclickAccs("btn_done_navbar");
-		IclickAccs("Back");
+		wait(1);
+		Iclick("HBGApp_back_xpath");
 		test.log(LogStatus.PASS, "Able to verify the Activities section successfully");
 	}
 
@@ -353,7 +354,7 @@ public class HBGSmokeTests extends BaseTest{
 		IclickAccs("shift_end");
 		//
 		wait(2);
-		IclickAccs("btn_toolbar_done");
+		IclickAccs("btn_done");
 		//ITouchXNY(613,588);
 		
 		//Iclick("Done_toolbar_xpath");
@@ -421,7 +422,7 @@ public class HBGSmokeTests extends BaseTest{
 		scrollUpJSExe("311","818","267","2000");
 		IclickAccs("Activities");
 		
-		IclickAccs("Back");
+		Iclick("HBGApp_back_xpath");
 		scrolldownToString("Cust:");
 	    test.log(LogStatus.PASS, "Able to verify the going back to Activities to Done section successfully");
 		
@@ -434,14 +435,14 @@ public class HBGSmokeTests extends BaseTest{
 		test.log(LogStatus.INFO, "Starting the test Review Full Report");
 		
 		IclickAccs("Review Full Report");
-		IclickAccs("Back"); 
+		Iclick("HBGApp_back_xpath"); 
 	    test.log(LogStatus.PASS, "Able to verify the Review Full Report Test section successfully");
 		System.out.println("Able to verify the Review Full Report Test section successfully");
 	}  
 	
 	
-	@Test(priority=2)
-//	@Test(priority=15, dependsOnMethods={"ReviewFullReport"})
+	
+	@Test(priority=15, dependsOnMethods={"ReviewFullReport"})
 	public void Signature() throws  InterruptedException{
 		// reports
 		test = rep.startTest("Signature");
