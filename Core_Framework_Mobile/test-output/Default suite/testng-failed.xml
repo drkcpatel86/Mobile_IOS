@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.mobile.datamanage.config.HBGSmokeTests">
+      <class name="com.Android.whatsApp">
         <methods>
-          <include name="newReport"/>
-          <include name="CrewTime"/>
-          <include name="ReviewFullReport"/>
-          <include name="ShiftStart"/>
-          <include name="init"/>
-          <include name="Activities"/>
-          <include name="EndShift"/>
-          <include name="ProductionValues"/>
-          <include name="DoneActivities"/>
-          <include name="HyRailBrake"/>
-          <include name="OpenApp"/>
-          <include name="InventoryUsage"/>
+          <include name="testApp"/>
           <include name="quit"/>
-          <include name="JobInfo"/>
-          <include name="Signature"/>
         </methods>
-      </class> <!-- com.mobile.datamanage.config.HBGSmokeTests -->
+      </class> <!-- com.Android.whatsApp -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
